@@ -1,5 +1,7 @@
+<!--python3 -m http.server-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,99 +9,108 @@
     <meta name="description" content="A Falun website to improve tourism">
     <meta name="keywords" content="Falun, tourism, history, nature and events">
     <link rel="stylesheet" href="assets/css/style.css">
+
     <title>Falun</title>
 </head>
 
-<body>
+<body class="container-all">
     <header>
-        <a>
-            <h1>Falun</h1> <!--maybe use a falun logo-->
+        <a href="index.html">
+          <img src="/assets/images/Bild-på-logga-vit.jpg"/>
+
         </a>
         <nav>
-            <ul>
+            <ul id="menu">
                 <li>
-                    <a>About Us</a>
+                    <a href="#about-us">About Us</a>
                 </li>
                 <li>
-                    <a>Gallery</a>
+                    <a href="#gallery">Gallery</a>
                 </li>
                 <li>
-                    <a>Sign Up</a>
+                    <a href="#sign-up">Sign Up</a>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <section id="cover-image">
+   
+            <h1  id="cover-text">Life is more <strong>exciting</strong> here!</h1>
+      
+    </section>
     
-    <article> 
-        <div><!-- Add a picture between the header section with links and About Us section--></div>
-        <div>
-            <h2>Falun, Dalarna</h2>
-            <p>Life is more exciting here!</p>
+    <section>
+        <div id="introduction">
+            <h1>About Us</h1>
+            <h2>
+                Falun is the capital of the Dalarna Region and currently has about 60,000 inhabitants. Known for its
+                rural landscapes, copper mining, long history and cultural and sporting events.
+            </h2>
         </div>
-    </article>
-
-    <article> 
-        <div>
-            <h2 >About Us</h2>
-            <p>
-            Falun is the capital of the Dalarna Region and currently has about 60,000 inhabitants. Known for its rural landscapes, copper mining, long history and cultural and sporting events.
-            </p>
-        </div>
-        
-        <div> <!--div left side-->
-            <h2>History</h2>
-                <ul>
-                    <h3>World Heritage site</h3>
-                    <h3>Great Copper Mountain "Kopparberget"</h3>
-                    <h3>Falun traditional red painting color "Falu färg"</h3>
-                    <h3>Falun tradtional food "Falu Korv"</h3>
-                </ul>
-        </div>
-
-        <div> <!--div center-->
-            <h2>Nature</h2>
+    </section>
+   
+    <section id="info">
+        <div id="left-text">
+            <!--div left side-->
+            <h1 class="cointainer">History</h1>
             <ul>
-                <h3>Trails, hiking, biking or riding</h3>
-                <h3>Fishing</h3>
-                <h3>Camping</h3>
-                <h3>Källviksbacken ski and snowboard</h3>
-                <h3>Lake Runn Winter and Summer</h3>
-                <h3>Boat trip or snowmobil</h3>
-                <h3>"Naturkarta" app link</h3>
+                <h2>World Heritage site</h2>
+                <h2>Great Copper Mountain "Kopparberget"</h2>
+                <h2>Falun traditional red painting color "Falu färg"</h2>
+                <h2>Falun tradtional food "Falu Korv"</h2>
             </ul>
         </div>
 
-        <div> <!--div right-->
-            <h2>Events</h2>
+        <div id="center-text">
+            <!--div center-->
+            <h1 class="cointainer">Nature</h1>
             <ul>
-                <h3>Midssomar</h3>
-                <h3>Sabaton Open Air Rock Festival</h3>
-                <h3>Cross Country Skiing World Cup Finals</h3>
-                <h3>Falun Ski Jumping Center</h3>
-                <h3>Vasalopet</h3>
-                <h3>Åfesten</h3>
-                <h3>Valborg</h3>
-                <h3>IBF Falun (Bandy National champions)</h3>
+                <h2>Trails, hiking, biking or riding</h2>
+                <h2>Fishing</h2>
+                <h2>Camping</h2>
+                <h2>Källviksbacken ski and snowboard</h2>
+                <h2>Lake Runn Winter and Summer</h2>
+                <h2>Boat trip or snowmobil</h2>
+                <h2>"Naturkarta" app link</h2>
             </ul>
         </div>
-    </article>
 
-    <article>
-        <h2>Gallery</h2>
-    </article>
+        <div id="right-text">
+            <!--div right-->
+            <h1 class="cointainer">Events</h1>
+            <ul>
+                <h2>Midssomar</h2>
+                <h2>Sabaton Open Air Rock Festival</h2>
+                <h2>Cross Country Skiing World Cup Finals</h2>
+                <h2>Falun Ski Jumping Center</h2>
+                <h2>Vasalopet</h2>
+                <h2>Åfesten</h2>
+                <h2>Valborg</h2>
+                <h2>IBF Falun (Bandy National champions)</h2>
+            </ul>
+        </div>
+    </section>
 
-    <article> <!--section with a centered form-->
-        <h2>Sign Up</h2>
-        <h3>First Name</h3>
-        <h3>Last Name</h3>
-        <h3>email</h3>
-        <h3>Age</h3> <!--add options as (-17) (17-35) (36-55) (56+)-->
-        <h3>Interest</h3>
-            <!--buttom with 4 options: History, Nature, Events, All-->
-        <h3>Submit buttom</h3>
-    </article>
+    <section class="cointainer">
+        <h1 id="gallery">Gallery</h1>
+    </section>
 
-    <footer> <!--add real links to Falun's social medias-->
+    <section class="cointainer">
+        <!--section with a centered form-->
+        <h1 id="sign-up">Sign Up</h2>
+        <h2>First Name</h2>
+        <h2>Last Name</h2>
+        <h2>email</h2>
+        <h2>Age</h2>
+        <!--add options as (-17) (17-35) (36-55) (56+)-->
+        <h2>Interest</h2>
+        <!--buttom with 4 options: History, Nature, Events, All-->
+        <h2>Submit buttom</h2>
+    </section>
+
+    <footer>
+        <!--add real links to Falun's social medias-->
         <ul>
             <li>Facebook</li>
             <li>Instagram</li>
@@ -108,4 +119,5 @@
         </ul>
     </footer>
 </body>
+
 </html>
