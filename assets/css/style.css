@@ -10,36 +10,33 @@ body {
     font-family: "Open sans",sans-serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 14px;
+    font-size: 20px;
     color: #a63822;
-    line-height: 140%;
 }
 
 header{
     display: flex;
+    height: 132px;
     justify-content: space-between;
 }
 
 /* headings and logo */
 h1 {
-    color: #a63822;
-    text-transform: uppercase;
     letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration-line: underline;
 }
 
 h2 {
-    color: #a63822;
-    font-size: small;
-    text-transform: capitalize;
+    padding: 50px;
     text-align: center;
+    line-height: 150%px;
+    
 }
 
 #logo {
-    float: left;
-    font-size: 250%;
-    font-weight: bold;
-    margin-right: 25px;
-    /* size: 50%;  NOT WORKING - change the size of the logo to something more adjustable */
+    margin-left: 0;
+    margin-top: 0;
 }
 
 #menu {
@@ -50,13 +47,12 @@ h2 {
 }
 
 #menu, #logo {
-    line-height: 75px;
+    line-height: 132px;
 }
 
 #menu li {
     list-style-type: none;
     margin-right: 25px;
-   /* flex-direction: row;  NOT WORKING - change position to top right side  or change to float*/
 }
 
 #menu a {
@@ -68,7 +64,7 @@ h2 {
     border-bottom: 1px solid #a63822;
 }
 
-/* Cover image and cover text*/
+/* Cover image and cover text*/ /* animation is not working as expected, covering header and about us section */
 #cover-zoom {
     height: 600px;
     width: 100%;
@@ -76,14 +72,15 @@ h2 {
     position: relative;
 }
 
-#cover-text, #cover-text h2 {
+#cover-text, #cover-text h1 {
     color: #fff;
+    line-height: 100%;
 }
 
 #cover-image {
-    height: 70vh;
+    height: 90vh;
     width: 100%;
-    background-image: url(../images/ice-skating.jpg) /*no-repeat center center*/;
+    background-image: url(../images/ice-skating.jpg);
     /* animation-name: cover-zoom; */
     /* animation-duration: 4s; */
     /* animation-fill-mode: forwards; */
@@ -99,44 +96,83 @@ h2 {
         transform: scale(1);
     }
     to {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 
 #cover-text {
-    color: white;
+    color: #fff;
     letter-spacing: 4px;
     text-align: left;
+    text-decoration-line: none;
 
-    width: 250px;
+    width: 290px;
     height: 100px;
 
-    padding-top: 10px;
+    padding-top: 30px;
     padding-left: 10px;
 
     background-color: #a63822;
 
-    bottom: 30px;
-    right: 150px;
+    bottom: 100px;
+    right: 100px;
 
     position: absolute;
 }
 
 /* Info section with about us, history, nature and events*/
-#topics {
-    height: 600px;
-}
-
 #introduction {
     text-align: center;
-    padding-top: 30px;
 }
 
-.cointainer {
+.title-section {
+    color: #fff;
+    background-color: #a63822;
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    border-color: #fff;
+    border: 5px;
 
-    height: 300px;
+    height: 100px;
     width: 100%;
+}
+
+#container {
+    display: flex;
+    flex-flow: row;
+    height: 100vh;
+}
+
+#left-text {
+    width: 33.33%;
+}
+
+#center-text {
+    width: 33.33%;
+}
+
+#right-text {
+    width: 33.33%;
+}
+
+/* Fotter */
+footer {
+    height: 150px;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media > li {
+    display: inline;
+}
+
+.social-media i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #a63822;
 }
