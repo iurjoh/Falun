@@ -10,13 +10,13 @@ body {
     font-family: "Open sans",sans-serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 20px;
+    font-size: 14px;
     color: #a63822;
 }
 
 header{
     display: flex;
-    height: 132px;
+    height: 100px;
     justify-content: space-between;
 }
 
@@ -40,14 +40,14 @@ h2 {
 }
 
 #menu {
-    font-size: 150%;
+    font-size: 100%;
     font-weight: bold;
     letter-spacing: 4px;
     display: flex;
 }
 
 #menu, #logo {
-    line-height: 132px;
+    line-height: 100px
 }
 
 #menu li {
@@ -132,29 +132,35 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-style: solid;
     border-color: #fff;
-    border: 5px;
+    border-width: 1px;
 
     height: 100px;
     width: 100%;
 }
 
-#container {
+#container-info {
     display: flex;
     flex-flow: row;
     height: 100vh;
+    position: relative;
 }
 
-#left-text {
+#left-text, #center-text, #right-text {
     width: 33.33%;
 }
 
-#center-text {
-    width: 33.33%;
+/* Gallery */
+#container-gallery {
+    display: flex;
+    flex-flow: row;
+    height: 50vh;
+    position: inherit;
 }
 
-#right-text {
-    width: 33.33%;
+#gallery-box1, #gallery-box2, #gallery-box3, #gallery-box4 {
+    width: 25%;
 }
 
 /* Fotter */
@@ -175,4 +181,9 @@ footer {
     margin: 1%;
     padding: 5%;
     color: #a63822;
+}
+
+/* Icons */
+.icon {
+    color: #fff;
 }
