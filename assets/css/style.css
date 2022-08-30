@@ -73,6 +73,7 @@ h2 {
 }
 
 #cover-text, #cover-text h1 {
+    font-size: 80%;
     color: #fff;
     line-height: 100%;
 }
@@ -106,8 +107,8 @@ h2 {
     text-align: left;
     text-decoration-line: none;
 
-    width: 290px;
-    height: 100px;
+    width: 20vh;
+    height: 10vh;
 
     padding-top: 30px;
     padding-left: 10px;
@@ -152,17 +153,38 @@ h2 {
 }
 
 /* Gallery */
-#container-gallery {
+.row {
     display: flex;
-    flex-flow: row;
-    height: 50vh;
-    position: inherit;
+    width: 100%;
+}
+  
+.row div {
+    width: 50%;
+}
+  
+.noMargin {
+    margin: 0px;
 }
 
 #gallery-box1, #gallery-box2, #gallery-box3, #gallery-box4 {
-    width: 25%;
+    width: 50%;
 }
 
+#gallery-box1 {
+    background-image: url(../images/spring.JPG) no-repeat center center;
+}
+
+#gallery-box2 {
+    background-image: url(../images/summer.JPG) no-repeat center center;
+}
+
+#gallery-box3 {
+    background-image: url(../images/autumn.JPG) no-repeat center center;
+}
+
+#gallery-box4 {
+    background-image: url(../images/winter.JPG) no-repeat center center;
+}
 /* Fotter */
 footer {
     height: 150px;
