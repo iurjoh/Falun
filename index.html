@@ -16,8 +16,7 @@
 <body class="container-all">
     <header>
         <a id="logo" href="index.html">
-            <img src="/assets/images/Bild-på-logga-vit.jpg" style="
-            height: 100px;" />
+            <img src="/assets/images/Bild-på-logga-vit.jpg" />
         </a>
         <nav>
             <ul id="menu">
@@ -42,7 +41,7 @@
 
     <section>
         <div id="introduction">
-            <h1 class="title-section">About Us</h1>
+            <h1 class="title-section">About Us <i class="fa-solid fa-city"></i></h1>
             <h2>
                 Falun is the capital of the Dalarna Region and currently has about 60,000 inhabitants. Known for its
                 rural landscapes, copper mining, long history, folk culture and sports events. The extraction of copper
@@ -57,7 +56,7 @@
     <section id="container-info">
         <div id="left-text">
             <!--div left side-->
-            <h1 class="title-section">History <i class="fa-solid fa-memo-circle-info"></i></h1>
+            <h1 class="title-section">History <i class="fa-solid fa-landmark"></i></h1>
             <ul>
                 <h2>UNESCO World Heritage Site</h2>
                 <h2>Stora Kopparberget Company</h2>
@@ -72,7 +71,7 @@
 
         <div id="center-text">
             <!--div center-->
-            <h1 class="title-section">Nature</h1>
+            <h1 class="title-section">Nature <i class="fa-solid fa-tree"></i></i></h1>
             <ul>
                 <h2>Hiking, biking or riding</h2>
                 <h2>Fishing</h2>
@@ -87,7 +86,7 @@
 
         <div id="right-text">
             <!--div right-->
-            <h1 class="title-section">Events</h1>
+            <h1 class="title-section">Events <i class="fa-solid fa-calendar-days"></i></h1>
             <ul>
                 <h2>Midssomar</h2>
                 <h2>Sabaton Open Air Rock Festival</h2>
@@ -101,30 +100,46 @@
         </div>
     </section>
 
-    <section >
-        <h1 class="title-section">Gallery</h1>
-        
+    <section>
+        <h1 class="title-section">Gallery <i class="fa-solid fa-camera"></i></h1>
+
         <hr>
-        
+
         <div id="gallery" class="row noMargin">
-        <h2 id="gallery-box1">Spring</h2>
-        <h2 id="gallery-box2">Summer</h2>
-        <h2 id="gallery-box3">Autumn</h2>
-        <h2 id="gallery-box4">Winter</h2>
+            <h2 id="gallery-box1">Spring</h2>
+            <h2 id="gallery-box2">Summer</h2>
+            <h2 id="gallery-box3">Autumn</h2>
+            <h2 id="gallery-box4">Winter</h2>
         </div>
     </section>
 
-    <section class="title-section">
-        <!--section with a centered form-->
-        <h1 id="sign-up">Sign Up</h2>
-            <h2>First Name</h2>
-            <h2>Last Name</h2>
-            <h2>email</h2>
-            <h2>Age</h2>
-            <!--add options as (-17) (17-35) (36-55) (56+)-->
-            <h2>Interest</h2>
-            <!--buttom with 4 options: History, Nature, Events, All-->
-            <h2>Submit buttom</h2>
+    <section class="form-section">
+        <img id="cover-form" src="assets/images/ArtknubbenView_fotoAnnaHolm_VisitDalarna.jpg" alt="Falun from distance">
+        <form class="signup-form">
+            <h1 id="sign-up" class="title-section">Sign Up <i class="fa-solid fa-pen-to-square"></i></h1>
+            <h2>Let's make your next trip more exciting! <i class="fa-solid fa-face-laugh-beam"></i></h2>
+            <label for="fname">First Name</label>
+            <input class="text-input" id="fname" name="first_name" type="text" required>
+            <hr>
+            <label for="lname">Last Name </label>
+            <input class="text-input" id="lname" name="last_name" type="text" required>
+            <hr>
+            <label for="email">Email Address</label>
+            <input class="text-input" type="email" id="email" name="email_address" required>
+            <hr>
+            <h2>Interested in:</h2>
+            <div id="form-buttons">
+                <label for="history">History <i class="fa-solid fa-landmark"></i></label>
+                <input type="radio" id="history" name="turism_preference" value="history" required>
+                <label for="nature">Nature <i class="fa-solid fa-tree"></i></label>
+                <input type="radio" id="nature" name="turism_preference" value="nature" required>
+                <label for="events">Events <i class="fa-solid fa-calendar-days"></i></label>
+                <input type="radio" id="events" name="turism_preference" value="events" required>
+                <label for="all">All</label>
+                <input type="radio" id="all" name="turism_preference" value="all" required>
+                <input class="submit-button" type="submit" value="Ready to go!">
+            </div>
+        </form>
     </section>
 
     <footer>
@@ -136,7 +151,9 @@
 
             <li><a href="https://www.youtube.com/user/FaluKommun2010"><i class="fa-brands fa-youtube"></i></a></li>
 
-            <li><a href="https://www.falun.se/kommun--demokrati/politik-och-demokrati/sa-kan-du-paverka/kontakta-kommunen/sociala-medier/falupodden.html"><i class="fa-solid fa-podcast"></i></a></li>
+            <li><a
+                    href="https://www.falun.se/kommun--demokrati/politik-och-demokrati/sa-kan-du-paverka/kontakta-kommunen/sociala-medier/falupodden.html"><i
+                        class="fa-solid fa-podcast"></i></a></li>
 
             <li><a href="https://www.linkedin.com/company/falu-kommun/"><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>

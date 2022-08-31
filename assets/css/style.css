@@ -7,14 +7,14 @@
 }
 
 body {
-    font-family: "Open sans",sans-serif;
+    font-family: "Open sans", sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 14px;
     color: #a63822;
 }
 
-header{
+header {
     display: flex;
     height: 100px;
     justify-content: space-between;
@@ -24,19 +24,20 @@ header{
 h1 {
     letter-spacing: 4px;
     text-transform: uppercase;
-    text-decoration-line: underline;
 }
 
 h2 {
     padding: 50px;
     text-align: center;
     line-height: 150%px;
-    
+
 }
 
 #logo {
     margin-left: 0;
     margin-top: 0;
+    max-width: 20vh;
+    max-height: 10vh;
 }
 
 #menu {
@@ -46,7 +47,8 @@ h2 {
     display: flex;
 }
 
-#menu, #logo {
+#menu,
+#logo {
     line-height: 100px
 }
 
@@ -64,7 +66,8 @@ h2 {
     border-bottom: 1px solid #a63822;
 }
 
-/* Cover image and cover text*/ /* animation is not working as expected, covering header and about us section */
+/* Cover image and cover text*/
+/* animation is not working as expected, covering header and about us section */
 #cover-zoom {
     height: 600px;
     width: 100%;
@@ -72,7 +75,8 @@ h2 {
     position: relative;
 }
 
-#cover-text, #cover-text h1 {
+#cover-text,
+#cover-text h1 {
     font-size: 80%;
     color: #fff;
     line-height: 100%;
@@ -92,10 +96,11 @@ h2 {
 }
 
 /* Cover zoom animation */
-@keyframes cover-zoom{
+@keyframes cover-zoom {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.1);
     }
@@ -129,7 +134,7 @@ h2 {
 .title-section {
     color: #fff;
     background-color: #a63822;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +153,9 @@ h2 {
     position: relative;
 }
 
-#left-text, #center-text, #right-text {
+#left-text,
+#center-text,
+#right-text {
     width: 33.33%;
 }
 
@@ -157,16 +164,19 @@ h2 {
     display: flex;
     width: 100%;
 }
-  
+
 .row div {
     width: 50%;
 }
-  
+
 .noMargin {
     margin: 0px;
 }
 
-#gallery-box1, #gallery-box2, #gallery-box3, #gallery-box4 {
+#gallery-box1,
+#gallery-box2,
+#gallery-box3,
+#gallery-box4 {
     width: 50%;
 }
 
@@ -185,16 +195,93 @@ h2 {
 #gallery-box4 {
     background-image: url(../images/winter.JPG) no-repeat center center;
 }
+
+/* Form section */
+.form-section {
+    clear: both;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+#cover-form {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    width: 50%;
+    position: absolute;
+    margin: 0 0 10px 50%;
+}
+
+.signup-form {
+    margin: 0 0 0 0;
+    color: #fff;
+    background-color: rgba(60, 60, 60, 0.6);
+    width: 50%;
+    position: absolute;
+    margin: 0 50% 10px 0;
+}
+
+.signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 90%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #a63822;
+    border-radius: 2px;
+}
+
+.text-input:hover {
+    border-color: #a63822;
+}
+
+#form-buttons {
+    text-align: center;
+}
+
+.submit-button {
+    margin-top: 20px;
+    margin-left: 40%;
+    border-radius: 2px;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    font-size: 100%;
+    background-color: #a63822;
+    color: #fafafa;
+    display: block;
+    text-align: center;
+}
+
+.submit-button:hover {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    font-size: 100%;
+    background-color: #fafafa;
+    color: #a63822;
+    position: block;
+}
+
 /* Fotter */
 footer {
-    height: 150px;
+    height: 10vh;
+    margin-bottom: 0;
+    position: absolute;
 }
 
 .social-media {
     text-align: center;
 }
 
-.social-media > li {
+.social-media>li {
     display: inline;
 }
 
