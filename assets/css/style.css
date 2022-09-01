@@ -4,21 +4,31 @@
     margin: 0;
     padding: 0;
     border: none;
+    list-style-type: none;
 }
 
 body {
     font-family: "Open sans", sans-serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: #a63822;
 }
 
 header {
     display: flex;
-    height: 100px;
+    flex-wrap: wrap;
+    height: 80px;
     justify-content: space-between;
+    align-items: center;
 }
+
+/* Images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
 
 /* headings and logo */
 h1 {
@@ -30,12 +40,17 @@ h2 {
     padding: 50px;
     text-align: center;
     line-height: 150%px;
+}
 
+p {
+    padding: 50px;
+    text-align: center;
+    line-height: 150%px;
 }
 
 #logo {
-    margin-left: 0;
-    margin-top: 0;
+    margin-left: 15px;
+    margin-top: 5px;
     max-width: 20vh;
     max-height: 10vh;
 }
@@ -49,17 +64,18 @@ h2 {
 
 #menu,
 #logo {
-    line-height: 100px
+    line-height: 80px
 }
 
 #menu li {
-    list-style-type: none;
     margin-right: 25px;
 }
 
-#menu a {
-    text-decoration: none;
+#menu li a {
     color: #a63822;
+    display: block;
+    text-decoration: none;
+    padding: 0 10px;
 }
 
 #menu a:hover {
@@ -127,15 +143,16 @@ h2 {
 }
 
 /* Info section with about us, history, nature and events*/
-#introduction {
+#intro {
     text-align: center;
 }
 
 .title-section {
+    display: flex;
     color: #fff;
     background-color: #a63822;
 
-    display: flex;
+
     align-items: center;
     justify-content: center;
     border-style: solid;
@@ -146,43 +163,37 @@ h2 {
     width: 100%;
 }
 
-#container-info {
-    display: flex;
-    flex-flow: row;
-    height: 100vh;
-    position: relative;
-}
-
-#left-text,
-#center-text,
-#right-text {
-    width: 33.33%;
+#info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
 /* Gallery */
-.row {
+.flex {
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    columns: 2;
 }
 
-.row div {
-    width: 50%;
-}
-
-.noMargin {
-    margin: 0px;
+.flex>h2 {
+    flex: 1 1 250px;
+    margin: 10px;
+    justify-content: center;
 }
 
 #gallery-box1,
 #gallery-box2,
 #gallery-box3,
 #gallery-box4 {
-    width: 50%;
+    max-width: 262px;
+    max-height: 195px;
 }
 
-#gallery-box1 {
-    background-image: url(../images/spring.JPG) no-repeat center center;
-}
+#gallery-box1 {}
 
 #gallery-box2 {
     background-image: url(../images/summer.JPG) no-repeat center center;
@@ -197,29 +208,28 @@ h2 {
 }
 
 /* Form section */
+
 .form-section {
-    clear: both;
-    background-size: cover;
-    background-position: center;
     display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    background-image: url(../images/ArtknubbenView_fotoAnnaHolm_VisitDalarna.jpg) no-repeat center center;
 }
 
-#cover-form {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    width: 50%;
-    position: absolute;
-    margin: 0 0 10px 50%;
+.form-section>h2 {
+    flex: 1 1 250px;
+    margin: 10px;
+    justify-content: center;
+    
 }
 
 .signup-form {
     margin: 0 0 0 0;
     color: #fff;
     background-color: rgba(60, 60, 60, 0.6);
-    width: 50%;
+    width: 100%;
     position: absolute;
-    margin: 0 50% 10px 0;
 }
 
 .signup-form>h2 {
@@ -231,6 +241,7 @@ h2 {
 .text-input {
     background: transparent;
     color: #fafafa;
+    text-align: center;
     width: 90%;
     height: 25px;
     margin: 5px 0 20px 0;
@@ -262,7 +273,7 @@ h2 {
 .submit-button:hover {
     margin-top: 20px;
     border-radius: 2px;
-    padding: 15px 32px 15px 32px;
+    
     text-align: center;
     font-size: 100%;
     background-color: #fafafa;
@@ -272,9 +283,9 @@ h2 {
 
 /* Fotter */
 footer {
-    height: 10vh;
+    height: 10px;
     margin-bottom: 0;
-    position: absolute;
+    position: relative;
 }
 
 .social-media {
@@ -288,7 +299,7 @@ footer {
 .social-media i {
     font-size: 160%;
     margin: 1%;
-    padding: 5%;
+    padding: 10px 40px 10px 40px;
     color: #a63822;
 }
 
