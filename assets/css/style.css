@@ -49,8 +49,7 @@ p {
 }
 
 #logo {
-    margin-left: 15px;
-    margin-top: 5px;
+    margin-top: 0px;
     max-width: 20vh;
     max-height: 10vh;
 }
@@ -60,11 +59,6 @@ p {
     font-weight: bold;
     letter-spacing: 4px;
     display: flex;
-}
-
-#menu,
-#logo {
-    line-height: 80px
 }
 
 #menu li {
@@ -83,14 +77,6 @@ p {
 }
 
 /* Cover image and cover text*/
-/* animation is not working as expected, covering header and about us section */
-#cover-zoom {
-    height: 600px;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
 #cover-text,
 #cover-text h1 {
     font-size: 80%;
@@ -102,24 +88,10 @@ p {
     height: 90vh;
     width: 100%;
     background-image: url(../images/ice-skating.jpg);
-    /* animation-name: cover-zoom; */
-    /* animation-duration: 4s; */
-    /* animation-fill-mode: forwards; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
-
-/* Cover zoom animation */
-@keyframes cover-zoom {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.1);
-    }
 }
 
 #cover-text {
@@ -127,18 +99,13 @@ p {
     letter-spacing: 4px;
     text-align: left;
     text-decoration-line: none;
-
     width: 20vh;
     height: 10vh;
-
     padding-top: 30px;
     padding-left: 10px;
-
     background-color: #a63822;
-
     bottom: 100px;
     right: 100px;
-
     position: absolute;
 }
 
@@ -151,23 +118,32 @@ p {
     display: flex;
     color: #fff;
     background-color: #a63822;
-
-
     align-items: center;
     justify-content: center;
     border-style: solid;
     border-color: #fff;
     border-width: 1px;
-
     height: 100px;
     width: 100%;
 }
 
+.list {
+    border-right: 1px solid #a63822;
+}
+
+
 #info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
+    grid-auto-flow: column;
     justify-content: space-between;
+    max-width: 100vw;
+}
+
+.list>h2 {
+    height: 50px;
+    text-align: center;
 }
 
 /* Gallery */
@@ -183,28 +159,18 @@ p {
     flex: 1 1 250px;
     margin: 10px;
     justify-content: center;
+    height: 262px;
+    width: 195px;
 }
 
 #gallery-box1,
 #gallery-box2,
 #gallery-box3,
 #gallery-box4 {
-    max-width: 262px;
-    max-height: 195px;
-}
-
-#gallery-box1 {}
-
-#gallery-box2 {
-    background-image: url(../images/summer.JPG) no-repeat center center;
-}
-
-#gallery-box3 {
-    background-image: url(../images/autumn.JPG) no-repeat center center;
-}
-
-#gallery-box4 {
-    background-image: url(../images/winter.JPG) no-repeat center center;
+    width: 262px;
+    height: 200px;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 /* Form section */
@@ -221,7 +187,7 @@ p {
     flex: 1 1 250px;
     margin: 10px;
     justify-content: center;
-    
+
 }
 
 .signup-form {
@@ -233,14 +199,14 @@ p {
 }
 
 .signup-form>h2 {
-    color: #fafafa;
+    color: #fff;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .text-input {
     background: transparent;
-    color: #fafafa;
+    color: #fff;
     text-align: center;
     width: 90%;
     height: 25px;
@@ -265,7 +231,7 @@ p {
     text-align: center;
     font-size: 100%;
     background-color: #a63822;
-    color: #fafafa;
+    color: #fff;
     display: block;
     text-align: center;
 }
@@ -273,10 +239,10 @@ p {
 .submit-button:hover {
     margin-top: 20px;
     border-radius: 2px;
-    
+
     text-align: center;
     font-size: 100%;
-    background-color: #fafafa;
+    background-color: #fff;
     color: #a63822;
     position: block;
 }
@@ -306,4 +272,13 @@ footer {
 /* Icons */
 .icon {
     color: #fff;
+}
+
+/* Media queries 
+/* For medium screen sizes from 780px wide and down */
+@media screen and (max-width: 780px) {
+    #info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(780px, 2fr), max-width: 50%;);
+    }
 }
