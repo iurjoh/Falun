@@ -10,13 +10,13 @@
     <meta name="keywords" content="Falun, tourism, history, nature and events">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Falun</title>
+    <title>Falun: Life is more exciting here!</title>
 </head>
 
 <body>
     <header>
         <a id="logo" href="index.html">
-            <img src="/assets/images/Bild-på-logga-vit.jpg" />
+            <img src="/assets/images/Bild-på-logga-vit.jpg" alt="Logo from Falun city" />
         </a>
         <nav>
             <ul id="menu">
@@ -57,42 +57,42 @@
         <div>
             <h1 class="title-section">History <i class="fa-solid fa-landmark"></i></h1>
             <ul class="list">
-                <h2>UNESCO World Heritage Site</h2>
-                <h2>Stora Kopparberget Company</h2>
-                <h2>Falun and World War II</h2>
-                <h2>Dalregementets</h2>
-                <h2>Gruvmuseet</h2>
-                <h2>Great Copper Mountain - Kopparberget</h2>
-                <h2>Falun traditional red painting color - Falu Färg</h2>
-                <h2>Falun tradtional food - Falu Korv</h2>
+                <li>UNESCO World Heritage Site</li>
+                <li>Stora Kopparberget Company</li>
+                <li>Falun and World War II</li>
+                <li>Dalregementets</li>
+                <li>Gruvmuseet</li>
+                <li>Great Copper Mountain - Kopparberget</li>
+                <li>Falun traditional red painting color - Falu Färg</li>
+                <li>Falun tradtional food - Falu Korv</li>
             </ul>
         </div>
 
         <div>
-            <h1 class="title-section">Nature <i class="fa-solid fa-tree"></i></i></h1>
+            <h1 class="title-section">Nature <i class="fa-solid fa-tree"></i></h1>
             <ul class="list">
-                <h2>Hiking, biking or riding</h2>
-                <h2>Fishing</h2>
-                <h2>Camping</h2>
-                <h2>Källviksbacken ski and snowboard</h2>
-                <h2>Lake Runn - Winter and Summer</h2>
-                <h2>Boat trip or snowmobil</h2>
-                <h2>Lakes</h2>
-                <h2>"Naturkarta" app link</h2>
+                <li>Hiking, biking or riding</li>
+                <li>Fishing</li>
+                <li>Camping</li>
+                <li>Källviksbacken ski and snowboard</li>
+                <li>Lake Runn - Winter and Summer</li>
+                <li>Boat trip or snowmobil</li>
+                <li>Lakes</li>
+                <li>"Naturkarta" app link</li>
             </ul>
         </div>
 
         <div>
             <h1 class="title-section">Events <i class="fa-solid fa-calendar-days"></i></h1>
             <ul class="list">
-                <h2>Midssomar</h2>
-                <h2>Sabaton Open Air Rock Festival</h2>
-                <h2>Cross Country Skiing World Cup Finals</h2>
-                <h2>Falun Ski Jumping Center</h2>
-                <h2>Vasalopet</h2>
-                <h2>Åfesten</h2>
-                <h2>Valborg</h2>
-                <h2>IBF Falun (Bandy National champions)</h2>
+                <li>Midssomar</li>
+                <li>Sabaton Open Air Rock Festival</li>
+                <li>Cross Country Skiing World Cup Finals</li>
+                <li>Falun Ski Jumping Center</li>
+                <li>Vasalopet</li>
+                <li>Åfesten</li>
+                <li>Valborg</li>
+                <li>IBF Falun (Bandy National champions)</li>
             </ul>
         </div>
     </section>
@@ -101,37 +101,42 @@
         <h1 class="title-section">Gallery <i class="fa-solid fa-camera"></i></h1>
         <hr>
         <div id="gallery" class="flex">
-            <h2 id="gallery-box1">
+            <div class="gallery-card">
                 <img src="assets/images/spring.JPG" alt="Falun during spring time">
-            </h2>
-            <h2 id="gallery-box2">
+            </div>
+            <div class="gallery-card">
                 <img src="assets/images/summer.JPG" alt="Falun during summer time">
-            </h2>
-            <h2 id="gallery-box3">
+            </div>
+            <div class="gallery-card">
                 <img src="assets/images/autumn.JPG" alt="Falun during autumn time">
-            </h2>
-            <h2 id="gallery-box4">
+            </div>
+            <div class="gallery-card">
                 <img src="assets/images/winter.JPG" alt="Falun during winter time">
-            </h2>
+            </div>
         </div>
     </section>
 
     <section class="form-section">
-        <img id="cover-form" src="assets/images/ArtknubbenView_fotoAnnaHolm_VisitDalarna.jpg" alt="Falun from distance">
+        <!-- <img id="cover-form" src="assets/images/ArtknubbenView_fotoAnnaHolm_VisitDalarna.jpg" alt="Falun from distance"> -->
+        <h1 id="sign-up" class="title-section">Sign Up <i class="fa-solid fa-pen-to-square"></i></h1>
         <form class="signup-form">
-            <h1 id="sign-up" class="title-section">Sign Up <i class="fa-solid fa-pen-to-square"></i></h1>
+
             <h2>Let's make your next trip more exciting! <i class="fa-solid fa-face-laugh-beam"></i></h2>
-            
-            <label for="fname">First Name</label>
-            <input class="text-input" id="fname" name="first_name" type="text" required>
-            <hr>
-            <label for="lname">Last Name </label>
-            <input class="text-input" id="lname" name="last_name" type="text" required>
-            <hr>
-            <label for="email">Email Address</label>
-            <input class="text-input" type="email" id="email" name="email_address" required>
-            <hr>
-            <h2>Interested in:</h2>
+            <div class="form-item">
+                <label for="fname">First Name:</label>
+                <input class="text-input" id="fname" name="first_name" type="text" required>
+            </div>
+            <div class="form-item">
+                <label for="lname">Last Name:</label>
+                <input class="text-input" id="lname" name="last_name" type="text" required>
+            </div>
+
+            <div class="form-item">
+                <label for="email">Email Address:</label>
+                <input class="text-input" type="email" id="email" name="email_address" required>
+            </div>
+
+            <h2 id="interest">Interested in:</h2>
             <div id="form-buttons">
                 <label for="history">History <i class="fa-solid fa-landmark"></i></label>
                 <input type="radio" id="history" name="turism_preference" value="history" required>

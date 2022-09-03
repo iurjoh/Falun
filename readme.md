@@ -1,0 +1,1 @@
+This site intends to publicize and promote tourism in the city of Falun, Sweden for all those who enjoy an exciting life, be it full of historic sites, beautiful natural landscapes full of wildlife or even attending cultural and sporting events.
