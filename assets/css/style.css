@@ -318,6 +318,10 @@ footer {
         display: block;
     }
 
+    #menu {
+        letter-spacing: 0;
+    }
+
     #menu li {
         padding: 25px ;
         margin-right: 0;
