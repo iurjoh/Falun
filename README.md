@@ -1,5 +1,7 @@
 ![Falun logo](./assets/images/Bild-p%C3%A5-logga-vit.jpg)
 
+[View the live site here.](https://iurjoh.github.io/Falun/)
+
 # Falun: Life is more exciting here!
 "Falun: Life is more exciting here!" is a website that intends to publicize and promote tourism in the city of Falun, Sweden for all those who enjoy an exciting life, be it full of historic sites, beautiful natural landscapes full of wildlife or even attending cultural and sporting events.
 
@@ -65,14 +67,22 @@ We invite all tourists to get to know our wonderful city, showing on this websit
 # Testing
 - HTML
 
-    Tests were carried out at various times. In the last few days, other tests were carried out to make the site in the best possible condition. No errors were presented by the [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-iurjoh-portfolio-wefsb8sn0up.ws-eu63.gitpod.io%2F) and only one warning appeared, which was soon corrected. At the end, No errors were returned.
+    Tests were carried out at various times. In the last few days, other tests were carried out to make the site in the best possible condition. No errors were presented by the [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fiurjoh.github.io%2FFalun%2F) and only one warning appeared, which was soon corrected. At the end, No errors were returned.
+
+    ![HTML validator](./assets/images/html-validator.JPG)
 
 - CSS
 
-    Likewise, several tests were done on the CSS code through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?lang=pt-BR&profile=css3svg&uri=8000-iurjoh-portfolio-wefsb8sn0up.ws-eu63.gitpod.io&usermedium=all&vextwarning=&warning=1&lang=en) and no errors were found.
+    Likewise, several tests were done on the CSS code through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fiurjoh.github.io%2FFalun%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) and no errors were found.
+
+    ![CSS validator](./assets/images/css-validator.JPG)
 
 ## Unfixed Bugs
 The Ready to go button! disappears when hovering. Unfortunately, it can only be noticed very close to the delivery deadline. This should be fixed in a future code update.
+
+# Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS) 
 
 # Deployment
 The site deployment was deploy through the GitHub repository. The steps are as follows:
@@ -104,4 +114,7 @@ Sites such as:
 ## Media
 
 - [Falun official site](https://www.falun.se/) where I found photos, icons and logos for press use;
-- Other images used on the site as in the Gallery section are from my personal prchive.
+- Other images used on the site as in the Gallery section are from my personal archive.
+
+## Acknowledgements
+- My mentor for continuous helpful feedback.
