@@ -64,4 +64,44 @@ We invite all tourists to get to know our wonderful city, showing on this websit
 
 # Testing
 - HTML
+
+    Tests were carried out at various times. In the last few days, other tests were carried out to make the site in the best possible condition. No errors were presented by the [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-iurjoh-portfolio-wefsb8sn0up.ws-eu63.gitpod.io%2F) and only one warning appeared, which was soon corrected. At the end, No errors were returned.
+
 - CSS
+
+    Likewise, several tests were done on the CSS code through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?lang=pt-BR&profile=css3svg&uri=8000-iurjoh-portfolio-wefsb8sn0up.ws-eu63.gitpod.io&usermedium=all&vextwarning=&warning=1&lang=en) and no errors were found.
+
+## Unfixed Bugs
+The Ready to go button! disappears when hovering. Unfortunately, it can only be noticed very close to the delivery deadline. This should be fixed in a future code update.
+
+# Deployment
+The site deployment was deploy through the GitHub repository. The steps are as follows:
+- In the GitHub repository, click on Settings tab;
+- Navigate to the menu on the left side and select Pages;
+- Set the source in the Build and deployment item as "Deploy from a branch". Then, in the Branch item, the Main option was chosen, /(root) folder and finishing the settings with the Save button.
+
+The link to the deployed website is: https://iurjoh.github.io/Falun/
+
+# Credits
+Here will be the sites that helped me find everything I needed to develop my work, including research and material sources.
+
+## Content
+
+Sites such as:
+- [Stack Overflow](https://stackoverflow.co/) were used at various times to clear up recurring doubts,
+- [Google Fonts](https://fonts.google.com/) to insert new fonts;
+- [Font Awesome](https://fontawesome.com/) to add icons to HTML;
+- [CSS Tricks](https://css-tricks.com/) to answer CSS questions;
+- [Code Institute](https://learn.codeinstitute.net/) to review material of study explanatory videos and guides on how to set up a complete website;
+- [GitHub](https://github.com/) to better understand other projects;
+- [Google](https://www.google.com) for more information on subjects related to the that I had to study during the creation of the site;
+- [W3C](https://www.w3.org/) to read the tutorials and understand basic rules of HTML and CSS;
+- [Wikipedia](https://www.wikipedia.org/) to search more information about specific features of the city of Falun;
+- [Falun official site](https://www.falun.se/) to get an idea of ​​the layout, palette of colors used, press/educational materials;
+- [Youtube](https://www.youtube.com/) tutorials to learn using  in a practical way some of the methods necessary to implement the desired functions for the site;
+- [Slack](https://slack.com/) communities to ask questions and access answers to questions that I found in the development of the site.
+
+## Media
+
+- [Falun official site](https://www.falun.se/) where I found photos, icons and logos for press use;
+- Other images used on the site as in the Gallery section are from my personal prchive.
