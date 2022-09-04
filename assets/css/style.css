@@ -207,7 +207,7 @@ li {
 
 .text-input {
     background: rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
     text-align: center;
     width: 75%;
     height: 25px;
@@ -298,7 +298,7 @@ footer {
         right: 40px;
         position: absolute;
     }
-    
+
     #gallery {
         grid-template-columns: 1fr;
     }
@@ -306,6 +306,7 @@ footer {
     header {
         flex-direction: column;
     }
+
     .submit-button {
         margin: 20px;
         margin-left: 33%;

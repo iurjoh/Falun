@@ -21,13 +21,15 @@ We invite all tourists to get to know our wonderful city, showing on this websit
 
 ![Landing page image](./assets/images/landing-page-image.JPG)
 
-- ### About Us
+- ### About Us - Summary
 
-    A short overview of Falun' is presented to highlight the city's qualities and all it has to offer. It talks about the location, geographic data and importance of the city in the political-regional context as capital of the Dalarna Region, about the historical background, how and when the city emerged and some curious facts to grab the attention of users.
+    - A short overview of Falun' is presented to highlight the city's qualities and all it has to offer. It talks about the location, geographic data and importance of the city in the political-regional context as capital of the Dalarna Region, about the historical background, how and when the city emerged and some curious facts to grab the attention of users.
 
 ![About us](./assets/images/about-us.JPG)
 
-    In this section are also the subsections: History, Nature and Events. Within each one of them, 8 characteristic items present in the city of Falun are described, such as the most important historical points, the best outdoor activities to practice in the city and its surroundings, as well as the best sporting and cultural events that attract hundreds thousands of tourists annually.
+- ### About Us - Info Section
+
+   - In this section are also the subsections: History, Nature and Events. Within each one of them, 8 characteristic items present in the city of Falun are described, such as the most important historical points, the best outdoor activities to practice in the city and its surroundings, as well as the best sporting and cultural events that attract hundreds thousands of tourists annually.**
 
 ![Info section](./assets/images/info-section.JPG)
 
@@ -61,4 +63,5 @@ We invite all tourists to get to know our wonderful city, showing on this websit
     - Improvement in the form system, being able to generate an automatic sending email so that the user receives a notification that he will now frequently receive more information and offers to reinforce his desire to come visit the city of Falun.
 
 # Testing
-
+- HTML
+- CSS
