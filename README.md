@@ -78,7 +78,10 @@ We invite all tourists to get to know our wonderful city, showing on this websit
     ![CSS validator](./assets/images/css-validator.JPG)
 
 ## Unfixed Bugs
-The Ready to go button! disappears when hovering. Unfortunately, it can only be noticed very close to the delivery deadline. This should be fixed in a future code update.
+- The Ready to go button! disappears when hovering. Unfortunately, it can only be noticed very close to the delivery deadline. This should be fixed in a future code update.
+- Falun logo was not loading in the live site version, but it was resolved with a change to the HTML code redirecting the image to be loaded directly from the main directory.
+- The form's background image also had the same problem. It was fixed with the same solution as Falun logo.
+- On devices with a screen resolution lower than 321x850px, the website presentation shows a white margin on the right. However, nothing was done because few users will use the site under these conditions.
 
 # Languages Used
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)

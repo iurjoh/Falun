@@ -323,7 +323,7 @@ footer {
     }
 
     #menu li {
-        padding: 25px ;
+        padding: 25px;
         margin-right: 0;
     }
 
@@ -340,7 +340,7 @@ footer {
         flex-direction: column;
     }
 
-   
+
 }
 
 @media only screen and (max-width: 992px) {
@@ -357,8 +357,3 @@ footer {
         width: 20%;
     }
 }
-
-
-
-
-
