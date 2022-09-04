@@ -31,7 +31,7 @@ We invite all tourists to get to know our wonderful city, showing on this websit
 
 - ### About Us - Info Section
 
-   - In this section are also the subsections: History, Nature and Events. Within each one of them, 8 characteristic items present in the city of Falun are described, such as the most important historical points, the best outdoor activities to practice in the city and its surroundings, as well as the best sporting and cultural events that attract hundreds thousands of tourists annually.**
+   - this section is divided in three subsections: History, Nature and Events. Within each one of them, 8 characteristic items present in the city of Falun are described, such as the most important historical points, the best outdoor activities to practice in the city and its surroundings, as well as the best sporting and cultural events that attract hundreds thousands of tourists annually.**
 
 ![Info section](./assets/images/info-section.JPG)
 
