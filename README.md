@@ -114,6 +114,7 @@ Sites such as:
 ## Media
 
 - [Falun official site](https://www.falun.se/) where I found photos, icons and logos for press use;
+- [Techsini](https://techsini.com/multi-mockup/index.php) Multi Device Website Mockup Generator was used to generate the image used in this README.md in the opening section "Falun: Life is more exciting here!"
 - Other images used on the site as in the Gallery section are from my personal archive.
 
 ## Acknowledgements
