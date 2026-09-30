@@ -1,0 +1,17 @@
+{
+  "name": "falun-pp1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "QA tooling for the Falun PP1 static site (no runtime dependencies)",
+  "scripts": {
+    "test:ci": "node qa/serve.js & SERVER_PID=$!; sleep 1; npx --no-install playwright test; STATUS=$?; kill $SERVER_PID; exit $STATUS",
+    "qa:links": "node qa/check-links.js",
+    "qa:lighthouse": "node qa/lighthouse.js"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.63.0",
+    "axe-core": "4.13.0",
+    "lighthouse": "13.5.0"
+  }
+}

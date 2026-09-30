@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Falun website to improve tourism - unofficial academic project">
+    <meta name="keywords" content="Falun, tourism, history, nature and events">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'sha256-lmAKtk0kunJExFUHF/w//3oz87Y/fnt98AXlV8/H9f4='; font-src 'self'; img-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+    <meta name="theme-color" content="#a63822">
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <style>
+/* Open Sans (latin-ext, 400) - SIL OFL 1.1, self-hosted */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/open-sans-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Open Sans (latin, 400) - SIL OFL 1.1, self-hosted */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/open-sans-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Open Sans (latin-ext, 700) - SIL OFL 1.1, self-hosted */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/open-sans-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Open Sans (latin, 700) - SIL OFL 1.1, self-hosted */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(assets/fonts/open-sans-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Global reset with sane sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #a63822;
+    overflow-x: hidden;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background-color: #a63822;
+    color: #fff;
+    padding: 12px 20px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    gap: 10px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+p {
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 75ch;
+    margin: 0 auto;
+}
+
+li {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Text wordmark replacing the official municipal logotype */
+#logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+    color: #a63822;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#menu {
+    font-size: 100%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+    justify-content: center;
+}
+
+#menu li a {
+    color: #a63822;
+    display: block;
+    text-decoration: none;
+    padding: 12px 5px;
+}
+
+#menu a:hover,
+#menu a:focus-visible {
+    border-bottom: 2px solid #a63822;
+}
+
+/* Hero section */
+#cover-image {
+    position: relative;
+    height: clamp(380px, 60vh, 620px);
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#cover-text {
+    font-size: 80%;
+    color: #fff;
+    line-height: 1.3;
+    letter-spacing: 4px;
+    text-align: left;
+    width: 20vh;
+    padding: 15px 10px;
+    background-color: #a63822;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}
+
+/* Section title bands */
+.title-section {
+    display: flex;
+    color: #fff;
+    background-color: #a63822;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 90px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+#about {
+    text-align: center;
+}
+
+/* Info section with history, nature and events */
+#info {
+    display: flex;
+    align-items: stretch;
+}
+
+#info>* {
+    width: 33.333%;
+    min-width: 0;
+}
+
+.list {
+    border-right: 1px solid #a63822;
+    height: 100%;
+}
+
+#info>div:last-child .list {
+    border-right: none;
+}
+
+.list>li {
+    min-height: 50px;
+    text-align: center;
+}
+
+.list a {
+    color: #a63822;
+    text-decoration: underline;
+}
+
+.list a:hover,
+.list a:focus-visible {
+    color: #7d2a19;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery-card {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.gallery-season {
+    text-align: center;
+    margin: 35px 0 5px;
+    letter-spacing: 2px;
+}
+
+/* Sign-up / demo form section */
+.form-section {
+    background-image: url(assets/images/bg-falun-view-640.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 641px) {
+    .form-section {
+        background-image: url(assets/images/bg-falun-view-1280.jpg);
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+    .form-section {
+        background-image: url(assets/images/bg-falun-view-1920.jpg);
+    }
+}
+
+.form-panel {
+    background-color: #fff;
+    color: #333;
+    max-width: 640px;
+    margin: 30px auto;
+    padding: 30px 25px;
+    border-radius: 4px;
+    width: calc(100% - 30px);
+}
+
+.demo-note {
+    color: #7d2a19;
+    padding: 0 0 20px 0;
+    font-size: 0.95rem;
+}
+
+#demo-form h3,
+#form-confirmation h3 {
+    color: #a63822;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-item label {
+    color: #7d2a19;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.text-input {
+    background: #fff;
+    color: #333;
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 1px solid #7d2a19;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+.text-input:focus-visible {
+    outline: 3px solid #a63822;
+    outline-offset: 1px;
+}
+
+#form-buttons {
+    border: none;
+    color: #333;
+}
+
+#form-buttons legend {
+    color: #7d2a19;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 5px 0;
+}
+
+.radio-option input[type="radio"] {
+    width: 24px;
+    height: 24px;
+    accent-color: #a63822;
+    flex-shrink: 0;
+}
+
+.submit-button {
+    margin: 20px auto 5px auto;
+    border-radius: 2px;
+    padding: 15px 32px;
+    min-height: 44px;
+    font-size: 120%;
+    background-color: #a63822;
+    color: #fff;
+    border: 2px solid #a63822;
+    display: block;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+    background-color: #7d2a19;
+    border-color: #7d2a19;
+    color: #fff;
+}
+
+#form-confirmation {
+    text-align: center;
+}
+
+#form-confirmation p {
+    padding: 10px 0;
+}
+
+#form-confirmation a,
+.footer-note a {
+    color: #7d2a19;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 25px 10px;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media>li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.social-media a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.social-media a:focus-visible {
+    outline: 3px solid #a63822;
+    outline-offset: 1px;
+}
+
+.social-media a .icon {
+    width: 1.8em;
+    height: 1.8em;
+    color: #a63822;
+}
+
+.social-media a:hover .icon {
+    color: #7d2a19;
+}
+
+.footer-note {
+    font-size: 0.85rem;
+    color: #7d2a19;
+    padding: 15px 20px 0 20px;
+}
+
+/* Media queries */
+/* Tablet devices */
+@media only screen and (max-width: 992px) {
+    header {
+        flex-direction: column;
+    }
+
+    #info {
+        flex-direction: column;
+    }
+
+    #info>* {
+        width: 100%;
+    }
+
+    .list {
+        border-right: none;
+        border-bottom: 1px solid #a63822;
+    }
+
+    #info>div:last-child .list {
+        border-bottom: none;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 768px) {
+    #cover-text {
+        bottom: 40px;
+        right: 40px;
+        padding: 12px 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small phones */
+@media only screen and (max-width: 480px) {
+    #menu {
+        letter-spacing: 1px;
+        gap: 5px 10px;
+    }
+
+    #cover-text {
+        bottom: 25px;
+        right: 25px;
+    }
+}
+
+/* Inline SVG icons (Font Awesome Free, CC BY 4.0) */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+/* Language switcher */
+.lang-switch {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.lang-switch button {
+    font-family: inherit;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: #a63822;
+    background-color: #fff;
+    border: 1px solid #a63822;
+    border-radius: 4px;
+}
+
+.lang-switch button[aria-pressed="true"] {
+    color: #fff;
+    background-color: #a63822;
+}
+
+.lang-switch button:hover,
+.lang-switch button:focus-visible {
+    color: #fff;
+    background-color: #7d2a19;
+    border-color: #7d2a19;
+}
+
+    </style>
+    <link rel="preload" as="image" imagesrcset="assets/images/hero-lugnet-640.webp 640w, assets/images/hero-lugnet-960.webp 960w, assets/images/hero-lugnet-1280.webp 1280w, assets/images/hero-lugnet-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
+
+    <title>Falun: Life is more exciting here!</title>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content" data-i18n="skip">Skip to main content</a>
+
+    <header>
+        <a id="logo" href="index.html" aria-label="Falun - back to top" data-i18n-aria="logoAria">FALUN</a>
+        <nav aria-label="Main navigation" data-i18n-aria="navAria">
+            <ul id="menu">
+                <li>
+                    <a href="#about" data-i18n="navAbout">About Us</a>
+                </li>
+                <li>
+                    <a href="#gallery" data-i18n="navGallery">Gallery</a>
+                </li>
+                <li>
+                    <a href="#sign-up" data-i18n="navSignup">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Language / SprÃ¥k">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="sv" aria-pressed="false">SV</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="cover-image" aria-label="Welcome" data-i18n-aria="coverAria">
+            <picture>
+                <source type="image/webp"
+                    srcset="assets/images/hero-lugnet-640.webp 640w, assets/images/hero-lugnet-960.webp 960w, assets/images/hero-lugnet-1280.webp 1280w, assets/images/hero-lugnet-1600.webp 1600w"
+                    sizes="100vw">
+                <img class="hero-img" src="assets/images/hero-lugnet-1280.jpg"
+                    srcset="assets/images/hero-lugnet-640.jpg 640w, assets/images/hero-lugnet-960.jpg 960w, assets/images/hero-lugnet-1280.jpg 1280w, assets/images/hero-lugnet-1600.jpg 1600w"
+                    sizes="100vw" width="1600" height="900" fetchpriority="high"
+                    alt="Snow-covered ski jumps at the Lugnet sports complex in Falun" data-i18n-alt="heroAlt">
+            </picture>
+            <h1 id="cover-text" data-i18n="heroTitle">Life is more exciting here!</h1>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h2 class="title-section" data-i18n="aboutTitle">About Us <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M480 48c0-26.5-21.5-48-48-48L336 0c-26.5 0-48 21.5-48 48l0 48-64 0 0-72c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 72-64 0 0-72c0-13.3-10.7-24-24-24S64 10.7 64 24l0 72L48 96C21.5 96 0 117.5 0 144l0 96L0 464c0 26.5 21.5 48 48 48l256 0 32 0 96 0 160 0c26.5 0 48-21.5 48-48l0-224c0-26.5-21.5-48-48-48l-112 0 0-144zm96 320l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM240 416l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16zM128 400c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32zM560 256c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zM256 176l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM112 160c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zM256 304c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32zM112 320l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16zm304-48l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16zM400 64c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0zm16 112l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16z"/></svg></h2>
+            <p data-i18n="aboutText">
+                Falun is the seat of Falun Municipality and the capital of the Dalarna Region in Sweden. The
+                municipality has about 60,000 inhabitants (SCB, 2025). The city is known for its rural landscapes,
+                copper mining, long history, folk culture and sports events. The extraction of copper and gold can be
+                traced back to the 1000s, with continuous extraction and on an industrial scale close to the 1300s by
+                the company Stora Kopparberget, which is possibly the oldest still-existing enterprise in the world,
+                proved active since 1347, when its charter was granted by King Magnus IV of Sweden. The first share in
+                the company is dated as early as 1288.
+            </p>
+        </section>
+
+        <section id="info" aria-label="Highlights of Falun" data-i18n-aria="infoAria">
+            <div>
+                <h2 class="title-section" data-i18n="histTitle">History <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M240.1 4.2c9.8-5.6 21.9-5.6 31.8 0l171.8 98.1L448 104l0 .9 47.9 27.4c12.6 7.2 18.8 22 15.1 36s-16.4 23.8-30.9 23.8L32 192c-14.5 0-27.2-9.8-30.9-23.8s2.5-28.8 15.1-36L64 104.9l0-.9 4.4-1.6L240.1 4.2zM64 224l64 0 0 192 40 0 0-192 64 0 0 192 48 0 0-192 64 0 0 192 40 0 0-192 64 0 0 196.3c.6 .3 1.2 .7 1.8 1.1l48 32c11.7 7.8 17 22.4 12.9 35.9S494.1 512 480 512L32 512c-14.1 0-26.5-9.2-30.6-22.7s1.1-28.1 12.9-35.9l48-32c.6-.4 1.2-.7 1.8-1.1L64 224z"/></svg></h2>
+                <ul class="list">
+                    <li data-i18n="hist1">UNESCO World Heritage Site</li>
+                    <li data-i18n="hist2">Stora Kopparberget Company</li>
+                    <li data-i18n="hist3">Falun and World War II</li>
+                    <li data-i18n="hist4">Dalregementet (the Dalarna Regiment)</li>
+                    <li data-i18n="hist5">Gruvmuseet - the Mine Museum</li>
+                    <li data-i18n="hist6">Great Copper Mountain - Kopparberget</li>
+                    <li data-i18n="hist7">Traditional red paint - Falu rödfärg</li>
+                    <li data-i18n="hist8">Traditional food - falukorv</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="title-section" data-i18n="natTitle">Nature <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M210.6 5.9L62 169.4c-3.9 4.2-6 9.8-6 15.5C56 197.7 66.3 208 79.1 208l24.9 0L30.6 281.4c-4.2 4.2-6.6 10-6.6 16C24 309.9 34.1 320 46.6 320L80 320 5.4 409.5C1.9 413.7 0 419 0 424.5c0 13 10.5 23.5 23.5 23.5L192 448l0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32 168.5 0c13 0 23.5-10.5 23.5-23.5c0-5.5-1.9-10.8-5.4-15L368 320l33.4 0c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L344 208l24.9 0c12.7 0 23.1-10.3 23.1-23.1c0-5.7-2.1-11.3-6-15.5L237.4 5.9C234 2.1 229.1 0 224 0s-10 2.1-13.4 5.9z"/></svg></h2>
+                <ul class="list">
+                    <li data-i18n="nat1">Hiking, biking or riding</li>
+                    <li data-i18n="nat2">Fishing</li>
+                    <li data-i18n="nat3">Camping</li>
+                    <li data-i18n="nat4">Källviksbacken ski and snowboard</li>
+                    <li data-i18n="nat5">Lake Runn - winter and summer</li>
+                    <li data-i18n="nat6">Boat trip or snowmobile</li>
+                    <li data-i18n="nat7">Lakes and nature reserves</li>
+                    <li><a href="https://www.naturkartan.se/sv/municipalities/falun" data-i18n="nat8">Naturkartan - trails and outdoor map of Falun</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="title-section" data-i18n="evtTitle">Events <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/></svg></h2>
+                <ul class="list">
+                    <li data-i18n="evt1">Midsommar (Midsummer)</li>
+                    <li><a href="https://www.falun.se/gora--uppleva/det-hander-i-falun/afesten.html" data-i18n="evt2">Åfesten - free city festival every June</a></li>
+                    <li><a href="https://falun2027.com/en/" data-i18n="evt3">FIS Nordic World Ski Championships 2027 (24 February - 7 March)</a></li>
+                    <li data-i18n="evt4">Cross-country skiing World Cup at Lugnet</li>
+                    <li data-i18n="evt5">Falun Ski Jumping at Lugnet</li>
+                    <li data-i18n="evt6">Valborg (Walpurgis Night)</li>
+                    <li data-i18n="evt7">IBF Falun - Swedish floorball champions</li>
+                    <li data-i18n="evt8">Sabaton Open Air - metal festival 2008-2022, on hiatus</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2 class="title-section" data-i18n="galTitle">Gallery <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M149.1 64.8L138.7 96 64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-74.7 0L362.9 64.8C356.4 45.2 338.1 32 317.4 32L194.6 32c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg></h2>
+            <h3 class="gallery-season" data-i18n="galSpring">Spring</h3>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-spring-640.webp 640w, assets/images/gallery-spring-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-spring-640.jpg"
+                            srcset="assets/images/gallery-spring-640.jpg 640w, assets/images/gallery-spring-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="480"
+                             loading="lazy" alt="A stream with fresh green spring growth in Falun municipality" data-i18n-alt="galAlt1">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-spring2-640.webp 640w, assets/images/gallery-spring2-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-spring2-640.jpg"
+                            srcset="assets/images/gallery-spring2-640.jpg 640w, assets/images/gallery-spring2-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="799"
+                             loading="lazy" alt="Visitors looking out over the Great Pit at Falun Copper Mine" data-i18n-alt="galAlt5">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-spring3-640.webp 640w, assets/images/gallery-spring3-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-spring3-640.jpg"
+                            srcset="assets/images/gallery-spring3-640.jpg 640w, assets/images/gallery-spring3-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="480"
+                             loading="lazy" alt="The Faluån river at Magasinbron with old red warehouses" data-i18n-alt="galAlt6">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-spring4-640.webp 640w, assets/images/gallery-spring4-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-spring4-640.jpg"
+                            srcset="assets/images/gallery-spring4-640.jpg 640w, assets/images/gallery-spring4-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="480"
+                             loading="lazy" alt="The old Faluån power station surrounded by spring greenery" data-i18n-alt="galAlt7">
+                    </picture>
+                </div>
+            </div>
+
+            <h3 class="gallery-season" data-i18n="galSummer">Summer</h3>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-summer-640.webp 640w, assets/images/gallery-summer-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-summer-640.jpg"
+                            srcset="assets/images/gallery-summer-640.jpg 640w, assets/images/gallery-summer-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="427"
+                             loading="lazy" alt="Främby udde on Lake Runn in Falun on a summer day" data-i18n-alt="galAlt2">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-summer2-640.webp 640w, assets/images/gallery-summer2-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-summer2-640.jpg"
+                            srcset="assets/images/gallery-summer2-640.jpg 640w, assets/images/gallery-summer2-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="427"
+                             loading="lazy" alt="Aerial view of the Falun mine area with its red tower in summer" data-i18n-alt="galAlt8">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-summer3-640.webp 640w, assets/images/gallery-summer3-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-summer3-640.jpg"
+                            srcset="assets/images/gallery-summer3-640.jpg 640w, assets/images/gallery-summer3-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="427"
+                             loading="lazy" alt="A traditional Falu red timber house in Falun in summer" data-i18n-alt="galAlt9">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-summer4-640.webp 640w, assets/images/gallery-summer4-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-summer4-640.jpg"
+                            srcset="assets/images/gallery-summer4-640.jpg 640w, assets/images/gallery-summer4-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="427"
+                             loading="lazy" alt="Falu Kristine kyrka and the main square on a bright summer night" data-i18n-alt="galAlt10">
+                    </picture>
+                </div>
+            </div>
+
+            <h3 class="gallery-season" data-i18n="galAutumn">Autumn</h3>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-autumn-640.webp 640w, assets/images/gallery-autumn-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-autumn-640.jpg"
+                            srcset="assets/images/gallery-autumn-640.jpg 640w, assets/images/gallery-autumn-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="480"
+                             loading="lazy" alt="The small boat harbour at Källviken, Lake Runn, in late autumn" data-i18n-alt="galAlt3">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-autumn2-640.webp 640w, assets/images/gallery-autumn2-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-autumn2-640.jpg"
+                            srcset="assets/images/gallery-autumn2-640.jpg 640w, assets/images/gallery-autumn2-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="361"
+                             loading="lazy" alt="View over Falun with autumn colours from the Radio House hill" data-i18n-alt="galAlt11">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-autumn3-640.webp 640w, assets/images/gallery-autumn3-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-autumn3-640.jpg"
+                            srcset="assets/images/gallery-autumn3-640.jpg 640w, assets/images/gallery-autumn3-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="480"
+                             loading="lazy" alt="The Creutz headframe at Falun Copper Mine in autumn" data-i18n-alt="galAlt12">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-autumn4-640.webp 640w, assets/images/gallery-autumn4-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-autumn4-640.jpg"
+                            srcset="assets/images/gallery-autumn4-640.jpg 640w, assets/images/gallery-autumn4-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="427"
+                             loading="lazy" alt="A historic miner's cottage in the Östanfors district in autumn" data-i18n-alt="galAlt13">
+                    </picture>
+                </div>
+            </div>
+
+            <h3 class="gallery-season" data-i18n="galWinter">Winter</h3>
+            <div class="gallery-grid">
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-winter-640.webp 640w, assets/images/gallery-winter-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-winter-640.jpg"
+                            srcset="assets/images/gallery-winter-640.jpg 640w, assets/images/gallery-winter-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="360"
+                             loading="lazy" alt="Falu gruva mine area in the snow with Christmas lights in December" data-i18n-alt="galAlt4">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-winter2-640.webp 640w, assets/images/gallery-winter2-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-winter2-640.jpg"
+                            srcset="assets/images/gallery-winter2-640.jpg 640w, assets/images/gallery-winter2-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="427"
+                             loading="lazy" alt="The Kronobränneriet building by the icy Faluån river in winter" data-i18n-alt="galAlt14">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-winter3-640.webp 640w, assets/images/gallery-winter3-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-winter3-640.jpg"
+                            srcset="assets/images/gallery-winter3-640.jpg 640w, assets/images/gallery-winter3-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="480"
+                             loading="lazy" alt="Winter view over Falun and the Great Pit of the copper mine" data-i18n-alt="galAlt15">
+                    </picture>
+                </div>
+                <div class="gallery-card">
+                    <picture>
+                        <source type="image/webp"
+                            srcset="assets/images/gallery-winter4-640.webp 640w, assets/images/gallery-winter4-1280.webp 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw">
+                        <img src="assets/images/gallery-winter4-640.jpg"
+                            srcset="assets/images/gallery-winter4-640.jpg 640w, assets/images/gallery-winter4-1280.jpg 1280w"
+                            sizes="(max-width: 768px) 100vw, (max-width: 992px) 50vw, 25vw" width="640" height="427"
+                             loading="lazy" alt="The Lugnet ski jumping hills in the snow" data-i18n-alt="galAlt16">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section" id="sign-up">
+            <h2 class="title-section" data-i18n="signTitle">Sign Up <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"/></svg></h2>
+            <div class="form-panel">
+                <p class="demo-note" data-i18n-html="demoNote"><strong>Demonstration only:</strong> this form does not send or store any data.</p>
+                <form id="demo-form">
+                    <h3 data-i18n="formTitle">Let's make your next trip more exciting! <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM96.8 314.1c-3.8-13.7 7.4-26.1 21.6-26.1l275.2 0c14.2 0 25.5 12.4 21.6 26.1C396.2 382 332.1 432 256 432s-140.2-50-159.2-117.9zM217.6 212.8s0 0 0 0c0 0 0 0 0 0l-.2-.2c-.2-.2-.4-.5-.7-.9c-.6-.8-1.6-2-2.8-3.4c-2.5-2.8-6-6.6-10.2-10.3c-8.8-7.8-18.8-14-27.7-14s-18.9 6.2-27.7 14c-4.2 3.7-7.7 7.5-10.2 10.3c-1.2 1.4-2.2 2.6-2.8 3.4c-.3 .4-.6 .7-.7 .9l-.2 .2c0 0 0 0 0 0c0 0 0 0 0 0s0 0 0 0c-2.1 2.8-5.7 3.9-8.9 2.8s-5.5-4.1-5.5-7.6c0-17.9 6.7-35.6 16.6-48.8c9.8-13 23.9-23.2 39.4-23.2s29.6 10.2 39.4 23.2c9.9 13.2 16.6 30.9 16.6 48.8c0 3.4-2.2 6.5-5.5 7.6s-6.9 0-8.9-2.8c0 0 0 0 0 0s0 0 0 0zm160 0c0 0 0 0 0 0l-.2-.2c-.2-.2-.4-.5-.7-.9c-.6-.8-1.6-2-2.8-3.4c-2.5-2.8-6-6.6-10.2-10.3c-8.8-7.8-18.8-14-27.7-14s-18.9 6.2-27.7 14c-4.2 3.7-7.7 7.5-10.2 10.3c-1.2 1.4-2.2 2.6-2.8 3.4c-.3 .4-.6 .7-.7 .9l-.2 .2c0 0 0 0 0 0c0 0 0 0 0 0s0 0 0 0c-2.1 2.8-5.7 3.9-8.9 2.8s-5.5-4.1-5.5-7.6c0-17.9 6.7-35.6 16.6-48.8c9.8-13 23.9-23.2 39.4-23.2s29.6 10.2 39.4 23.2c9.9 13.2 16.6 30.9 16.6 48.8c0 3.4-2.2 6.5-5.5 7.6s-6.9 0-8.9-2.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0z"/></svg></h3>
+                    <div class="form-item">
+                        <label for="fname" data-i18n="labelFname">First Name:</label>
+                        <input class="text-input" id="fname" name="first_name" type="text" autocomplete="given-name"
+                            required>
+                    </div>
+                    <div class="form-item">
+                        <label for="lname" data-i18n="labelLname">Last Name:</label>
+                        <input class="text-input" id="lname" name="last_name" type="text" autocomplete="family-name"
+                            required>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="email" data-i18n="labelEmail">Email Address:</label>
+                        <input class="text-input" type="email" id="email" name="email_address" autocomplete="email"
+                            required>
+                    </div>
+
+                    <fieldset id="form-buttons">
+                        <legend data-i18n="legendInterest">I'm interested in:</legend>
+                        <div class="radio-option">
+                            <input type="radio" id="history" name="tourism_preference" value="history" required>
+                            <label for="history" data-i18n="optHistory">History <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M240.1 4.2c9.8-5.6 21.9-5.6 31.8 0l171.8 98.1L448 104l0 .9 47.9 27.4c12.6 7.2 18.8 22 15.1 36s-16.4 23.8-30.9 23.8L32 192c-14.5 0-27.2-9.8-30.9-23.8s2.5-28.8 15.1-36L64 104.9l0-.9 4.4-1.6L240.1 4.2zM64 224l64 0 0 192 40 0 0-192 64 0 0 192 48 0 0-192 64 0 0 192 40 0 0-192 64 0 0 196.3c.6 .3 1.2 .7 1.8 1.1l48 32c11.7 7.8 17 22.4 12.9 35.9S494.1 512 480 512L32 512c-14.1 0-26.5-9.2-30.6-22.7s1.1-28.1 12.9-35.9l48-32c.6-.4 1.2-.7 1.8-1.1L64 224z"/></svg></label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="nature" name="tourism_preference" value="nature">
+                            <label for="nature" data-i18n="optNature">Nature <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M210.6 5.9L62 169.4c-3.9 4.2-6 9.8-6 15.5C56 197.7 66.3 208 79.1 208l24.9 0L30.6 281.4c-4.2 4.2-6.6 10-6.6 16C24 309.9 34.1 320 46.6 320L80 320 5.4 409.5C1.9 413.7 0 419 0 424.5c0 13 10.5 23.5 23.5 23.5L192 448l0 32c0 17.7 14.3 32 32 32s32-14.3 32-32l0-32 168.5 0c13 0 23.5-10.5 23.5-23.5c0-5.5-1.9-10.8-5.4-15L368 320l33.4 0c12.5 0 22.6-10.1 22.6-22.6c0-6-2.4-11.8-6.6-16L344 208l24.9 0c12.7 0 23.1-10.3 23.1-23.1c0-5.7-2.1-11.3-6-15.5L237.4 5.9C234 2.1 229.1 0 224 0s-10 2.1-13.4 5.9z"/></svg></label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="events" name="tourism_preference" value="events">
+                            <label for="events" data-i18n="optEvents">Events <svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/></svg></label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="all" name="tourism_preference" value="all">
+                            <label for="all" data-i18n="optAll">Everything</label>
+                        </div>
+                        <input class="submit-button" type="submit" value="Ready to go!" data-i18n-value="submitBtn">
+                    </fieldset>
+                </form>
+                <div id="form-confirmation" role="status" hidden>
+                    <h3 data-i18n="confTitle">Thank you!</h3>
+                    <p data-i18n="confP1">Your demo sign-up worked, and nothing was sent or stored. This site is an unofficial study project, so no real data is collected here.</p>
+                    <p data-i18n-html="confP2">Planning a real trip? Start at <a href="https://www.visitdalarna.se">Visit Dalarna</a>, the official tourism site for the region.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="social-media">
+            <li><a href="https://www.facebook.com/falukommun" aria-label="Falu kommun on Facebook"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg></a></li>
+
+            <li><a href="https://www.instagram.com/falukommun/" aria-label="Falu kommun on Instagram"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg></a></li>
+
+            <li><a href="https://www.youtube.com/user/FaluKommun2010" aria-label="Falu kommun on YouTube"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a></li>
+
+            <li><a href="https://www.linkedin.com/company/falu-kommun/" aria-label="Falu kommun on LinkedIn"><svg class="icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a></li>
+        </ul>
+        <p class="footer-note" data-i18n="footerNote">Unofficial academic project - not affiliated with Falu kommun. Photo credits and licenses are listed in the project README.</p>
+    </footer>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/demo.js"></script>
+</body>
+
+</html>
