@@ -1,0 +1,526 @@
+/* Open Sans (latin-ext, 400) - SIL OFL 1.1, self-hosted */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(../fonts/open-sans-400-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Open Sans (latin, 400) - SIL OFL 1.1, self-hosted */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(../fonts/open-sans-400-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Open Sans (latin-ext, 700) - SIL OFL 1.1, self-hosted */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(../fonts/open-sans-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Open Sans (latin, 700) - SIL OFL 1.1, self-hosted */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(../fonts/open-sans-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Global reset with sane sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: #a63822;
+    overflow-x: hidden;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background-color: #a63822;
+    color: #fff;
+    padding: 12px 20px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    gap: 10px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+p {
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 75ch;
+    margin: 0 auto;
+}
+
+li {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Text wordmark replacing the official municipal logotype */
+#logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 6px;
+    color: #a63822;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#menu {
+    font-size: 100%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+    justify-content: center;
+}
+
+#menu li a {
+    color: #a63822;
+    display: block;
+    text-decoration: none;
+    padding: 12px 5px;
+}
+
+#menu a:hover,
+#menu a:focus-visible {
+    border-bottom: 2px solid #a63822;
+}
+
+/* Hero section */
+#cover-image {
+    position: relative;
+    height: clamp(380px, 60vh, 620px);
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#cover-text {
+    font-size: 80%;
+    color: #fff;
+    line-height: 1.3;
+    letter-spacing: 4px;
+    text-align: left;
+    width: 20vh;
+    padding: 15px 10px;
+    background-color: #a63822;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}
+
+/* Section title bands */
+.title-section {
+    display: flex;
+    color: #fff;
+    background-color: #a63822;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 90px;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+#about {
+    text-align: center;
+}
+
+/* Info section with history, nature and events */
+#info {
+    display: flex;
+    align-items: stretch;
+}
+
+#info>* {
+    width: 33.333%;
+    min-width: 0;
+}
+
+.list {
+    border-right: 1px solid #a63822;
+    height: 100%;
+}
+
+#info>div:last-child .list {
+    border-right: none;
+}
+
+.list>li {
+    min-height: 50px;
+    text-align: center;
+}
+
+.list a {
+    color: #a63822;
+    text-decoration: underline;
+}
+
+.list a:hover,
+.list a:focus-visible {
+    color: #7d2a19;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery-card {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.gallery-season {
+    text-align: center;
+    margin: 35px 0 5px;
+    letter-spacing: 2px;
+}
+
+/* Sign-up / demo form section */
+.form-section {
+    background-image: url(../images/bg-falun-view-640.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 641px) {
+    .form-section {
+        background-image: url(../images/bg-falun-view-1280.jpg);
+    }
+}
+
+@media only screen and (min-width: 1281px) {
+    .form-section {
+        background-image: url(../images/bg-falun-view-1920.jpg);
+    }
+}
+
+.form-panel {
+    background-color: #fff;
+    color: #333;
+    max-width: 640px;
+    margin: 30px auto;
+    padding: 30px 25px;
+    border-radius: 4px;
+    width: calc(100% - 30px);
+}
+
+.demo-note {
+    color: #7d2a19;
+    padding: 0 0 20px 0;
+    font-size: 0.95rem;
+}
+
+#demo-form h3,
+#form-confirmation h3 {
+    color: #a63822;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-item label {
+    color: #7d2a19;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.text-input {
+    background: #fff;
+    color: #333;
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 1px solid #7d2a19;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+.text-input:focus-visible {
+    outline: 3px solid #a63822;
+    outline-offset: 1px;
+}
+
+#form-buttons {
+    border: none;
+    color: #333;
+}
+
+#form-buttons legend {
+    color: #7d2a19;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 5px 0;
+}
+
+.radio-option input[type="radio"] {
+    width: 24px;
+    height: 24px;
+    accent-color: #a63822;
+    flex-shrink: 0;
+}
+
+.submit-button {
+    margin: 20px auto 5px auto;
+    border-radius: 2px;
+    padding: 15px 32px;
+    min-height: 44px;
+    font-size: 120%;
+    background-color: #a63822;
+    color: #fff;
+    border: 2px solid #a63822;
+    display: block;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+    background-color: #7d2a19;
+    border-color: #7d2a19;
+    color: #fff;
+}
+
+#form-confirmation {
+    text-align: center;
+}
+
+#form-confirmation p {
+    padding: 10px 0;
+}
+
+#form-confirmation a,
+.footer-note a {
+    color: #7d2a19;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding: 25px 10px;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media>li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.social-media a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.social-media a:focus-visible {
+    outline: 3px solid #a63822;
+    outline-offset: 1px;
+}
+
+.social-media a .icon {
+    width: 1.8em;
+    height: 1.8em;
+    color: #a63822;
+}
+
+.social-media a:hover .icon {
+    color: #7d2a19;
+}
+
+.footer-note {
+    font-size: 0.85rem;
+    color: #7d2a19;
+    padding: 15px 20px 0 20px;
+}
+
+/* Media queries */
+/* Tablet devices */
+@media only screen and (max-width: 992px) {
+    header {
+        flex-direction: column;
+    }
+
+    #info {
+        flex-direction: column;
+    }
+
+    #info>* {
+        width: 100%;
+    }
+
+    .list {
+        border-right: none;
+        border-bottom: 1px solid #a63822;
+    }
+
+    #info>div:last-child .list {
+        border-bottom: none;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 768px) {
+    #cover-text {
+        bottom: 40px;
+        right: 40px;
+        padding: 12px 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small phones */
+@media only screen and (max-width: 480px) {
+    #menu {
+        letter-spacing: 1px;
+        gap: 5px 10px;
+    }
+
+    #cover-text {
+        bottom: 25px;
+        right: 25px;
+    }
+}
+
+/* Inline SVG icons (Font Awesome Free, CC BY 4.0) */
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
+/* Language switcher */
+.lang-switch {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.lang-switch button {
+    font-family: inherit;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: #a63822;
+    background-color: #fff;
+    border: 1px solid #a63822;
+    border-radius: 4px;
+}
+
+.lang-switch button[aria-pressed="true"] {
+    color: #fff;
+    background-color: #a63822;
+}
+
+.lang-switch button:hover,
+.lang-switch button:focus-visible {
+    color: #fff;
+    background-color: #7d2a19;
+    border-color: #7d2a19;
+}
