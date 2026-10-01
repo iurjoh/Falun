@@ -1,5 +1,7 @@
 # Falun: Life is more exciting here!
 
+[Português (Brasil)](README.pt-BR.md) | **English**
+
 [View the live site here.](https://iurjoh.github.io/Falun/)
 
 > **Unofficial academic project.** This site was built as a Code Institute
