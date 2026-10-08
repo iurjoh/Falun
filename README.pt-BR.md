@@ -12,7 +12,7 @@ Draft documental, 08/10/2026. Código público; nenhuma publicação/alteração
 
 **Live demo:** https://iurjoh.github.io/Falun/
 
-![Falun mobile view, synthetic data where applicable](docs/assets/2026-10-08-mobile.png)
+Captura mobile preparada em 08/10/2026; upload no repositório pendente. Sem imagem embutida até o asset existir.
 
 390x844, 2026-10-08. Captura nova no pacote; enviar junto com o README.
 
