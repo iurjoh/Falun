@@ -1,40 +1,75 @@
-# Falun: Life is more exciting here!
+# Falun - an unofficial tourism study
 
-[Português (Brasil)](README.pt-BR.md) | **English**
+**English** | [Português (Brasil)](README.pt-BR.md)
 
-[View the live site here.](https://iurjoh.github.io/Falun/)
+An unofficial tourism site about Falun, built as Code Institute Portfolio Project 1. Not endorsed by the municipality or tourism authority.
 
-> **Unofficial academic project.** This site was built as a Code Institute
-> Portfolio Project 1 (HTML/CSS). It is not affiliated with, endorsed by, or
-> connected to Falu kommun, Visit Dalarna, or any official body. For official
-> visitor information, see [Visit Dalarna](https://www.visitdalarna.se) and
-> [falun.se](https://www.falun.se).
+Public academic project, live demo. README update in a draft PR; no runtime changes or merge in this documentation round.
 
-"Falun: Life is more exciting here!" is a website that intends to publicize and promote tourism in the city of Falun, Sweden for all those who enjoy an exciting life, be it full of historic sites, beautiful natural landscapes full of wildlife or even attending cultural and sporting events.
+**Source / Código:** https://github.com/iurjoh/Falun
 
-We invite all tourists to get to know our wonderful city, showing on this website adapted for mobiles, tablets and desktops a panorama that we can offer throughout the 4 seasons of the year. Let's make your next trip more exciting!
+**Inspected commit / Commit inspecionado:** `425e9f4ece60447334a92a56d62688ec74317259`
 
-# Features
+**Live demo:** https://iurjoh.github.io/Falun/
 
-- **Navigation bar** - links to the About Us, Gallery and Sign Up sections, with a skip link for keyboard users and a wrapping layout that works down to 320px wide screens.
-- **Bilingual EN/SV** - a language switcher in the header (EN / SV buttons with `aria-pressed`). Exactly one language is rendered at a time (the other exists only in the JS dictionary, never on screen), the choice persists in `localStorage`, and `html lang`, `<title>`, meta description, alt texts and ARIA labels all switch with the content.
-- **Hero section** - a responsive photo of the Lugnet ski jumps in the snow (`<picture>` with WebP/JPEG in 640/1280/1600px), overlaid with the site slogan. Height is balanced with `clamp()` instead of a fixed 90vh.
-- **About Us** - a short overview of Falun, including the municipality population with source (about 60,000 inhabitants, SCB 2025).
-- **Info section** - History, Nature and Events highlights, reviewed in September 2026 against official sources (see Content sources below).
-- **Gallery** - sixteen real Falun photos, four per season (spring, summer, autumn, winter), all from Wikimedia Commons with verified free licenses (see Image credits below). Season groups with headings, responsive grid, lazy loading below the fold, WebP/JPEG variants.
-- **Sign Up (demonstration form)** - see the limitation note below.
-- **Footer** - links to the official Falu kommun social media profiles, each with an accessible name.
+Mobile capture prepared on 2026-10-08; repository upload is pending. No image embed is included until the asset exists.
 
-## Demonstration form limitation
+390x844, 2026-10-08. New capture supplied in this review package; upload together with the README.
 
-The sign-up form is a **front-end demonstration only**. It has no `action` and
-no back-end: submitting it is intercepted in the browser (JavaScript) and only
-shows a confirmation message. **No name, email, or any other data is ever sent
-or stored**, and nothing is added to the URL. The confirmation message and the
-page itself point visitors who want real information to
-[Visit Dalarna](https://www.visitdalarna.se), the official tourism site.
+## Idea and planning
 
-# Content sources (reviewed 2026-09-30)
+The original goal was a responsive introduction to the city across four seasons. The retained project record describes About, Gallery and a sign-up demonstration. The 2026 revival added one-language-at-a-time EN/SV content, accessible navigation and better image delivery. Missing early wireframes are not reconstructed.
+
+## Features and limits
+
+About/history/nature/events, sixteen seasonal gallery photos, EN/SV switch and a demonstration form. The form is not a newsletter service. Current content is not freshly fact-checked event-by-event in this review.
+
+## Architecture
+
+Static HTML/CSS with local JavaScript for language selection and the demo form. Responsive picture variants and lazy gallery loading; no application backend. Node tooling is development-only.
+
+## Design and screenshots
+
+Warm red accents, photography, seasonal groups and wrapping navigation. The separately prepared mobile capture shows the public hero, not the complete gallery or all form states.
+
+## Build history
+
+Academic HTML/CSS project, followed by the September 2026 revival documented in source: official-source review, Wikimedia image credits, responsive images, EN/SV controls and accessibility work. The October 1 commit adds the Portuguese README. Exact early implementation dates are not inferred from recreated history.
+
+## Performance
+
+The old README recorded Lighthouse results on 2026-09-30 against a retired Cloudflare preview. That historical URL is not the current demo and is not offered as a live link. Those scores do not establish the performance of today's GitHub Pages deployment. No new Lighthouse run was made. Image variants and lazy loading are implemented, not proof of a current performance grade.
+
+## Security and privacy
+
+Keep the unofficial-project notice. Use no personal data in the demo form. Images need the retained Wikimedia author/license notices. A no-backend form is not real registration. This is not a fresh security or legal certification.
+
+## Testing evidence
+
+2026-10-08: live home and mobile hero visually inspected at 390x844; root width matched viewport (390px). Full lazy gallery, EN/SV persistence, keyboard/form and complete routes were not rerun. Historical QA exists in the previous README; treat it as dated evidence.
+
+## Run locally
+
+```sh
+python3 -m http.server 8000
+```
+
+## Deployment and roadmap
+
+Retest all gallery assets after scrolling; language, keyboard and form flows; capture desktop/tablet; run current validation, dependencies and performance checks; preserve photo attribution.
+
+No hosting account/cost settings or deployment branch were changed or freshly verified. Reachable pages do not prove source/deployment parity.
+
+## Credits and license
+
+Code Institute PP1, HTML/CSS study resources, official visitor sources and Wikimedia Commons media. The original image attributions are retained below.
+
+No root LICENSE exists in the inspected checkout. Do not advertise MIT until original-code rights and third-party terms are checked and a license is approved. No license changed.
+
+
+## Retained original attributions
+
+### Content sources (reviewed 2026-09-30)
 
 - Population: about 60,000 inhabitants in **Falun Municipality**, SCB statistics for 2025 (via [Kommunatlas](https://www.kommunatlas.se/befolkning/falun/)).
 - [FIS Nordic World Ski Championships 2027 in Falun, 24 February - 7 March 2027](https://falun2027.com/en/) (official event site; [dates announcement](https://falun2027.com/falun-2027-dates-of-the-competitions-february-24-march-7-2027/)).
@@ -46,7 +81,7 @@ page itself point visitors who want real information to
 - [Naturkartan - Falun](https://www.naturkartan.se/sv/municipalities/falun) - real trails/outdoor map link replacing the "app link" placeholder.
 - Falupodden (podcast) link removed: the page returns 404.
 
-# Image credits and licenses
+### Image credits and licenses
 
 All photos were replaced in September 2026. The previous background photo
 ("ArtknubbenView", 18MB, © Visit Dalarna / Anna Holm) and other unlicensed or
@@ -77,88 +112,8 @@ Wikimedia Commons with verified free licenses, served as optimized JPEG/WebP in
 
 The Falu kommun logotype images were removed: a municipal logotype is not free
 to reuse, and this is not an official site. The header now uses a plain text
-wordmark.
 
-# Testing (matrix, 2026-09-30)
-
-| Test | Method | Result |
-|------|--------|--------|
-| HTML validation | [W3C Nu validator](https://validator.w3.org/nu/) (file upload) | 0 errors, 0 warnings |
-| CSS validation | [W3C Jigsaw](https://jigsaw.w3.org/css-validator/) (file upload, css3svg) | 0 errors |
-| Horizontal overflow | Headless Chrome, `scrollWidth - innerWidth` | 0px at 320, 390, 834 and 1440px |
-| Layout | Full-page screenshots at 320/390 (mobile), 834 (tablet), 1440 (desktop) | No overlap, menu wraps, form labels above fields, stacked radios, centered button |
-| Keyboard | Tab walk from page top | Skip link appears first, then logo, menu, content links, form fields, submit button - logical order |
-| Button hover/focus | Headless Chrome hover + focus screenshots | Button stays in place; only colors change (was: disappeared on hover) |
-| Contrast | Computed ratios of the palette | `#a63822` on white and white on `#a63822` ≈ 6.6:1; darker `#7d2a19` variants higher - all body text ≥ 4.5:1 |
-| Demo form flow | Filled and submitted in headless Chrome | URL unchanged (no data in URL), no request made, confirmation shown |
-| External links | `curl` status checks | All 200. Facebook/Instagram return 400/429 to bots (Meta bot protection) but were confirmed live via search; Falupodden 404 removed |
-| Background image weight | File sizes | 51KB (640) / 205KB (1280) / 419KB (1920) - target < 500KB met |
-
-## Fixed bugs (revival branch, 2026-09-30)
-
-- Form without `action`/`method` leaked names and emails into the URL and saved nothing - now an explicitly marked client-side demo.
-- "Ready to go!" button disappeared on hover (margin/position changed) - hover/focus now only change colors.
-- 18MB copyrighted Visit Dalarna background - replaced with a licensed 419KB (max) responsive image; other unlicensed/unverifiable images also replaced.
-- Form contrast below 4:1 on a busy photo - now a solid panel with dark text, opaque 44px+ inputs, `fieldset`/`legend`, and `autocomplete`.
-- Social icons had no accessible names - added `aria-label` per network; dead Falupodden link removed.
-- 2px horizontal overflow on all viewports (4px at 320px) - global `box-sizing: border-box` and fluid menu.
-- Gallery anchor pointed at the photo grid instead of the section title; hero was a fixed 90vh.
-- Heading hierarchy fixed (one `h1`, `h2` for sections), `<main>` landmark and skip link added.
-- Content errors: Midssomar → Midsommar, snowmobil → snowmobile, tradtional → traditional, Vasalopet removed (Sälen-Mora race, not Falun), IBF Falun corrected to floorball, "World Cup Finals" replaced by the verified 2026 World Cup and 2027 World Championships, Sabaton Open Air marked as on hiatus, population attributed to the municipality with source/year.
-- `.vscode/` directory from the Code Institute template (telemetry scripts with API keys) removed.
-
-# Quality certification results (2026-09-30)
-
-Measured against the acceptance matrix (Lighthouse, WCAG 2.2 AA, W3C, security
-hygiene) on the revival build. Preview deployed to Cloudflare Pages:
-
-**https://falun-revival-preview.pages.dev/**
-
-| Criterion | Target | Result (measured) |
-|-----------|--------|-------------------|
-| Lighthouse Performance | >= 95 | **100** mobile, **100** desktop (live URL, 3 runs each, worst run 100) |
-| Lighthouse Accessibility | 100 | **100** mobile and desktop (live URL) |
-| Lighthouse Best Practices | 100 | **100** mobile and desktop (live URL) |
-| Lighthouse SEO | 100 | **100** mobile and desktop (live URL; a real `robots.txt` was needed - Pages serves the HTML fallback at `/robots.txt` otherwise) |
-| axe (WCAG 2.0/2.1/2.2 A+AA tags) | 0 violations | **0 violations, 0 incomplete** - 9/9 Playwright+axe tests pass against the live URL (home, form confirmation state, overflow; viewports 320/390/1440) |
-| W3C HTML (Nu) | 0 errors | **0 errors, 0 warnings** |
-| W3C CSS (Jigsaw) | 0 errors | **0 errors** |
-| `npm audit` (QA dev dependencies) | clean | **0 vulnerabilities** |
-| gitleaks secret scan | clean | Working tree clean. 1 finding in **git history only**: a Code Institute template telemetry API key in `.vscode/uptime.sh` (commit `691017f`). Purging history requires the planned clean repo recreation. |
-
-Note on headers: GitHub Pages (and this preview) are static hosts - the site
-cannot set its own HTTP security headers, so a security-headers grade is not
-promised. What the site controls (a `Content-Security-Policy` meta tag with a
-sha256 hash, `referrer-policy`, self-hosted fonts, no third-party scripts)
-is in place.
-
-## Build and QA notes (revival branch)
-
-- `index.html` carries the CSS **inlined** (with a CSP `style-src 'sha256-...'`
-  hash). After editing `assets/css/style.css`, regenerate with
-  `node qa/inline-css.js` (it re-inlines the CSS, rewrites `../images/` and
-  `../fonts/` paths, and recomputes the hash).
-- QA tooling (`qa/`, `package.json`): local server, Lighthouse runner, axe
-  Playwright tests, link checker. All dev dependencies, all free.
-- Translations live in `assets/js/i18n.js`; page elements carry
-  `data-i18n` / `data-i18n-alt` / `data-i18n-value` / `data-i18n-aria` /
-  `data-i18n-html` attributes that the switcher fills.
-- `.github/workflows/quality.yml` runs W3C validation, Lighthouse CI, axe,
-  gitleaks, npm audit and the link check on every push (actions pinned by SHA).
-
-# Languages Used
-- [HTML5](https://en.wikipedia.org/wiki/HTML5)
-- [CSS3](https://en.wikipedia.org/wiki/CSS)
-
-# Deployment
-The site deployment was deployed through the GitHub repository. The steps are as follows:
-- In the GitHub repository, click on Settings tab;
-- Navigate to the menu on the left side and select Pages;
-- Set the source in the Build and deployment item as "Deploy from a branch". Then, in the Branch item, the Main option was chosen, /(root) folder and finishing the settings with the Save button.
-
-The link to the deployed website is: https://iurjoh.github.io/Falun/
-
-# Credits
+### Credits
 
 Sites such as:
 - [Stack Overflow](https://stackoverflow.co/) were used at various times to clear up recurring doubts,
@@ -171,5 +126,5 @@ Sites such as:
 - [Wikipedia](https://www.wikipedia.org/) and [Wikimedia Commons](https://commons.wikimedia.org/) for facts and freely licensed photos;
 - [Falun official site](https://www.falun.se/) and [Falun 2027](https://falun2027.com/en/) for event information.
 
-## Acknowledgements
+### Acknowledgements
 - My mentor for continuous helpful feedback.
