@@ -1,10 +1,10 @@
-# Falun - revisão para revival do portfólio
+# Falun - estudo de turismo não oficial
 
 **Português (Brasil)** | [English](README.md)
 
 Site de turismo não oficial sobre Falun, criado como Portfolio Project 1 do Code Institute. Não é endossado pela prefeitura ou autoridade turística.
 
-Draft documental, 08/10/2026. Código público; nenhuma publicação/alteração feita nesta revisão.
+Projeto acadêmico público com demo ao vivo. Atualização de README em PR draft; sem mudança de runtime nem merge nesta rodada.
 
 **Source / Código:** https://github.com/iurjoh/Falun
 
@@ -30,7 +30,7 @@ HTML/CSS estático, JavaScript local para idioma/formulário demo. Variantes res
 
 ## Design e capturas
 
-Vermelho quente, fotografia, grupos por estação e navegação flexível. Nova captura móvel abaixo mostra hero público, não toda a galeria ou estados do formulário.
+Vermelho quente, fotografia, grupos por estação e navegação flexível. A captura móvel preparada separadamente mostra hero público, não toda a galeria ou estados do formulário.
 
 ## Histórico do build
 
@@ -38,7 +38,7 @@ Projeto acadêmico HTML/CSS, seguido pelo revival de setembro de 2026 documentad
 
 ## Desempenho
 
-Documentação existente registra Lighthouse de 30/09/2026. Nenhum Lighthouse novo foi executado; não afirmamos nota atual. Variantes/lazy loading implementados não comprovam uma nota.
+O README anterior registrou Lighthouse em 30/09/2026 contra um preview Cloudflare retirado. Essa URL histórica não é a demo atual nem é oferecida como link ao vivo. As notas não comprovam desempenho do GitHub Pages de hoje. Nenhum Lighthouse novo foi executado. Variantes/lazy loading implementados não comprovam uma nota.
 
 ## Segurança e privacidade
 
