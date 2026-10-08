@@ -1,10 +1,10 @@
-# Falun - portfolio revival review
+# Falun - an unofficial tourism study
 
 **English** | [Português (Brasil)](README.pt-BR.md)
 
 An unofficial tourism site about Falun, built as Code Institute Portfolio Project 1. Not endorsed by the municipality or tourism authority.
 
-Documentation draft, 2026-10-08. Public source; no publication or code change made by this review.
+Public academic project, live demo. README update in a draft PR; no runtime changes or merge in this documentation round.
 
 **Source / Código:** https://github.com/iurjoh/Falun
 
@@ -30,7 +30,7 @@ Static HTML/CSS with local JavaScript for language selection and the demo form. 
 
 ## Design and screenshots
 
-Warm red accents, photography, seasonal groups and wrapping navigation. New mobile capture below shows the public hero, not the complete gallery or all form states.
+Warm red accents, photography, seasonal groups and wrapping navigation. The separately prepared mobile capture shows the public hero, not the complete gallery or all form states.
 
 ## Build history
 
@@ -38,7 +38,7 @@ Academic HTML/CSS project, followed by the September 2026 revival documented in 
 
 ## Performance
 
-Existing documentation records Lighthouse results from 2026-09-30. No new Lighthouse run was made; no fresh score is claimed. Image variants and lazy loading are implemented, not proof of a current performance grade.
+The old README recorded Lighthouse results on 2026-09-30 against a retired Cloudflare preview. That historical URL is not the current demo and is not offered as a live link. Those scores do not establish the performance of today's GitHub Pages deployment. No new Lighthouse run was made. Image variants and lazy loading are implemented, not proof of a current performance grade.
 
 ## Security and privacy
 
