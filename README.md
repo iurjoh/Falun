@@ -12,7 +12,7 @@ Documentation draft, 2026-10-08. Public source; no publication or code change ma
 
 **Live demo:** https://iurjoh.github.io/Falun/
 
-![Falun mobile view, synthetic data where applicable](docs/assets/2026-10-08-mobile.png)
+Mobile capture prepared on 2026-10-08; repository upload is pending. No image embed is included until the asset exists.
 
 390x844, 2026-10-08. New capture supplied in this review package; upload together with the README.
 
