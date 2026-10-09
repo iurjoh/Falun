@@ -2,23 +2,17 @@
 
 **Português (Brasil)** | [English](README.md)
 
-[![Abrir demo](https://img.shields.io/badge/demo-live-2ea44f)](https://iurjoh.github.io/Falun/)
-
 ## Demo
 
-[Abrir demo](https://iurjoh.github.io/Falun/)
+[![Abrir demo](https://img.shields.io/badge/demo-live-2ea44f)](https://iurjoh.github.io/Falun/)
 
 Abra no navegador, sem instalar nada ou usar o terminal.
 
 Site de turismo não oficial sobre Falun, criado como Portfolio Project 1 do Code Institute. Não é endossado pela prefeitura ou autoridade turística.
 
-Projeto acadêmico público com demo ao vivo.
-
 **Source / Código:** https://github.com/iurjoh/Falun
 
 **Inspected commit / Commit inspecionado:** `425e9f4ece60447334a92a56d62688ec74317259`
-
-**Live demo:** https://iurjoh.github.io/Falun/
 
 Captura mobile preparada em 08/10/2026; upload no repositório pendente. Sem imagem embutida até o asset existir.
 
@@ -73,7 +67,6 @@ Nenhuma configuração de host/custo/branch alterada ou reconferida. Página ace
 Code Institute PP1, recursos de estudo HTML/CSS, fontes oficiais de turismo e mídia Wikimedia. Preservar a lista de autores/licenças por imagem na publicação.
 
 Sem LICENSE na raiz inspecionada. Não anunciar MIT antes de conferir direitos autorais/terceiros e aprovar licença. Nenhuma licença alterada.
-
 
 ## Atribuições originais preservadas
 
