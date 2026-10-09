@@ -2,6 +2,14 @@
 
 **English** | [Português (Brasil)](README.pt-BR.md)
 
+[![Open demo](https://img.shields.io/badge/demo-live-2ea44f)](https://iurjoh.github.io/Falun/)
+
+## Demo
+
+[Open demo](https://iurjoh.github.io/Falun/)
+
+Open in your browser. No installation or terminal required.
+
 An unofficial tourism site about Falun, built as Code Institute Portfolio Project 1. Not endorsed by the municipality or tourism authority.
 
 Public academic project with a live demo.
