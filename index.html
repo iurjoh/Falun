@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A Falun website to improve tourism - unofficial academic project">
     <meta name="keywords" content="Falun, tourism, history, nature and events">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'sha256-lmAKtk0kunJExFUHF/w//3oz87Y/fnt98AXlV8/H9f4='; font-src 'self'; img-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'sha256-5W2Ay/QC5rRPCXP5xEQd2oEvn2f4JXuR7/B+EyhM4RI='; font-src 'self'; img-src 'self'; connect-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
     <meta name="theme-color" content="#a63822">
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
     <style>
@@ -538,7 +538,13 @@ footer {
     border-color: #7d2a19;
 }
 
-    </style>
+    
+/* Compact form-to-footer spacing on phones; desktop stays unchanged. */
+@media only screen and (max-width: 480px) {
+    .form-section { padding-bottom: 20px; }
+    .form-panel { margin-bottom: 0; padding-bottom: 20px; }
+}
+</style>
     <link rel="preload" as="image" imagesrcset="assets/images/hero-lugnet-640.webp 640w, assets/images/hero-lugnet-960.webp 960w, assets/images/hero-lugnet-1280.webp 1280w, assets/images/hero-lugnet-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
 
     <title>Falun: Life is more exciting here!</title>

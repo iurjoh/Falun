@@ -524,3 +524,9 @@ footer {
     background-color: #7d2a19;
     border-color: #7d2a19;
 }
+
+/* Compact form-to-footer spacing on phones; desktop stays unchanged. */
+@media only screen and (max-width: 480px) {
+    .form-section { padding-bottom: 20px; }
+    .form-panel { margin-bottom: 0; padding-bottom: 20px; }
+}
