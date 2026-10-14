@@ -129,3 +129,16 @@ Sites such as:
 
 ### Acknowledgements
 - My mentor for continuous helpful feedback.
+
+## Technology and effort snapshot
+
+Captured from repository sources on 2026-10-14. This is a source snapshot, not a claim about production versions or the technology available at the original launch.
+
+- **Stack at this snapshot:** HTML, CSS and native JavaScript; no runtime framework. Playwright 1.63.0 and Lighthouse 13.5.0 in package.json are QA tools.
+- **Earlier record:** The repository was recreated for the 2026 revival. Its first commit does not date the original academic project.
+- **Observed calendar window:** 2026-09-30 to 2026-10-10: surviving commits reachable from main. Calendar span, not continuous work or time to launch.
+- **Pull requests:** 3 visible PRs: 0 open, 3 closed, captured 2026-10-14 before this documentation change. Closed does not mean merged. Deleted/recreated history is excluded.
+- **Decision and reason:** A static site keeps hosting simple; EN/SV selection shows one language at a time, and credited replacement images avoid reuse of unlicensed material.
+- **Estimated active effort:** unavailable. No reliable time log or bounded work-session reconstruction was established. Commit count and elapsed calendar time are not converted into hours.
+
+Evidence: current dependency/source files named above, retained Git history and the repository PR list. Versions and counts are fixed to this snapshot, not live counters.
