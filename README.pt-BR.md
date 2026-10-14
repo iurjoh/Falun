@@ -129,3 +129,16 @@ Sites such as:
 
 ### Acknowledgements
 - My mentor for continuous helpful feedback.
+
+## Retrato da tecnologia e do esforço
+
+Registro das fontes do repositório em 2026-10-14. É um retrato do código, não uma afirmação sobre versões em produção nem sobre a tecnologia disponível no lançamento original.
+
+- **Stack neste registro:** HTML, CSS e JavaScript nativo, sem framework de execução. Playwright 1.63.0 e Lighthouse 13.5.0 em package.json são ferramentas de QA.
+- **Registro anterior:** O repositório foi recriado na retomada de 2026. Seu primeiro commit não data o projeto acadêmico original.
+- **Janela de calendário observada:** 2026-09-30 a 2026-10-10: commits preservados e alcançáveis em main. Intervalo de calendário, não trabalho contínuo nem prazo até o lançamento.
+- **Pull requests:** 3 PRs visíveis: 0 abertos, 3 fechados, consultados em 2026-10-14 antes desta alteração. Fechado não significa mergeado. Histórico apagado/recriado não entra na contagem.
+- **Decisão e motivo:** O site estático simplifica a hospedagem; a seleção EN/SV mostra um idioma por vez, e imagens substitutas com créditos evitam reutilizar material sem licença.
+- **Estimativa de esforço ativo:** indisponível. Não foi estabelecido um registro confiável de tempo nem uma reconstrução delimitada das sessões de trabalho. Contagem de commits e tempo de calendário não são convertidos em horas.
+
+Evidências: arquivos de dependências/código citados acima, histórico Git preservado e lista de PRs do repositório. Versões e contagens pertencem a este registro, não são contadores ao vivo.
